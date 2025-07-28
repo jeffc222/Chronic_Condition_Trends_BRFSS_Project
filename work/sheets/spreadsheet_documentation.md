@@ -1,10 +1,10 @@
 # Spreadsheet Documentation
-This document provides a structured overview of each tab within the **brfss.xlsx spreadsheet.** Each tab is explained with its purpose, contents, and relevance to the overall analysis process. Together, these annotations offer transparency into the data preparation, organization, and logic behind the visual and analytical outputs presented in this project.
+This document provides a structured overview of each tab within the **brfss.xlsx spreadsheet.** Each tab is explained with its purpose, contents, and relevance to the overall analysis process. Together, these annotations offer transparency into the data preparation, organization, and logic behind the visual and analytical outputs presented in this project. Side my note- add pictures maybe for summary, obestiy, opt, and oypt tabs
 
 ## Original Tab
 This tab contains the full cleaned dataset exported from BigQuery and serves as the foundation for all downstream analysis. It includes annual prevalence values for four chronic health indicators—**obesity, diabetes, smoking,** and **depression**—across five selected U.S. states **(California, Texas, Florida, New York, and Pennsylvania)** from 2012 to 2022.
 
-For each condition, this dataset also includes the **prior year’s value** and the **calculated year-over-year (YoY) percent change**, allowing for clear comparisons over time. Although these columns are grouped by type (all prior-year values, then all YoY changes), they support accurate trend analysis and helped inform both summary statistics and Tableau visualizations.
+For each condition, this dataset also includes the **prior year’s value** and the **calculated year-over-year (YoY) percent change**, allowing for clear comparisons over time. Although these columns are grouped by type (all current years, all prior-year values, then all YoY changes), they support accurate trend analysis and helped inform both summary statistics and Tableau visualizations.
 
 ## Summary Tab
 This tab presents 10-year average prevalence values (2012–2022) for four chronic conditions—**obesity, diabetes, smoking,** and **depression**—across five U.S. states **(CA, TX, FL, NY, PA)**. A top "National" row calculates the average across all five states for each indicator, serving as a reference benchmark.
@@ -28,16 +28,16 @@ This formatting helps visually emphasize values that deviate from the 10-year av
 ## OPT Tab (Obesity Pivot Table)
 This tab contains a pivot table summarizing **obesity** prevalence from 2012 to 2022 across the five selected U.S. states **(CA, TX, FL, NY, PA)**. The table displays average values by year and state, with the **Grand Total row showing the overall 10-year average for each state** and the **Grand Total column showing national averages.**
 
-The national and state-level averages calculated through this pivot table match the values computed using AVERAGEIFS formulas in the corresponding indicator tab **(obesity)**. This validates consistency across methods.
+The national and state-level averages calculated through this pivot table **match** the values computed using AVERAGEIFS formulas in the corresponding indicator tab **(obesity)**. This validates consistency across methods.
 
 Even though only the overall national averages were used in the final visualization, state-specific averages were calculated to explore internal patterns and to support cross-state comparisons in the exploratory phase.
 
-
 ## OYPT Tab (Obesity YoY Pivot Table)
+This pivot table displays the **year-over-year (YoY) percentage changes** in **obesity** rates from 2012 to 2022, organized by state. Each row corresponds to a year, and each column represents a selected state. The **"Grand Total"** row calculates the average annual change for each state across the available years.
 
+While these YoY values were not directly visualized in the dashboard, they were used during analysis to explore how consistently or dramatically **obesity** rates changed over time. The pivot table complements the core dataset by summarizing directional trends that can support deeper insights or future recommendations.
 
-
-
+* **Note:** **Florida** lacks data for **2021**, resulting in fewer years (8 years instead of 10) of available data for YoY calculations compared to other states. This may slightly impact the average annual change shown in the Grand Total row.
 
 
 
@@ -58,10 +58,18 @@ Conditional formatting highlights individual data points based on whether they a
 This formatting helps visually emphasize values that deviate from the 10-year average, aiding quick comparison across states and years.
 
 ## DIPT Tab (Diabetes Pivot Table)
+This tab contains a pivot table summarizing **diabetes** prevalence from 2012 to 2022 across the five selected U.S. states **(CA, TX, FL, NY, PA)**. The table displays average values by year and state, with the **Grand Total row showing the overall 10-year average for each state** and the **Grand Total column showing national averages.**
 
+The national and state-level averages calculated through this pivot table **match** the values computed using AVERAGEIFS formulas in the corresponding indicator tab **(diabetes)**. This validates consistency across methods.
 
+Even though only the overall national averages were used in the final visualization, state-specific averages were calculated to explore internal patterns and to support cross-state comparisons in the exploratory phase.
 
 ## DIYPT (Diabetes YoY Pivot Table) 
+This pivot table displays the **year-over-year (YoY) percentage changes** in **diabetes** rates from 2012 to 2022, organized by state. Each row corresponds to a year, and each column represents a selected state. The **"Grand Total"** row calculates the average annual change for each state across the available years.
+
+While these YoY values were not directly visualized in the dashboard, they were used during analysis to explore how consistently or dramatically **diabetes** rates changed over time. The pivot table complements the core dataset by summarizing directional trends that can support deeper insights or future recommendations.
+
+* **Note:** **Florida** lacks data for **2021**, resulting in fewer years (8 years instead of 10) of available data for YoY calculations compared to other states. This may slightly impact the average annual change shown in the Grand Total row.
 
 
 ## Smoking Tab
@@ -79,10 +87,18 @@ Conditional formatting highlights individual data points based on whether they a
 This formatting helps visually emphasize values that deviate from the 10-year average, aiding quick comparison across states and years.
 
 ## SPT Tab (Smoking Pivot Table)
+This tab contains a pivot table summarizing **smoking** prevalence from 2012 to 2022 across the five selected U.S. states **(CA, TX, FL, NY, PA)**. The table displays average values by year and state, with the **Grand Total row showing the overall 10-year average for each state** and the **Grand Total column showing national averages.**
 
+The national and state-level averages calculated through this pivot table **match** the values computed using AVERAGEIFS formulas in the corresponding indicator tab **(smoking)**. This validates consistency across methods.
 
+Even though only the overall national averages were used in the final visualization, state-specific averages were calculated to explore internal patterns and to support cross-state comparisons in the exploratory phase.
 
 ## SYPT Tab (Smoking YoY Pivot Table)
+This pivot table displays the **year-over-year (YoY) percentage changes** in **smoking** rates from 2012 to 2022, organized by state. Each row corresponds to a year, and each column represents a selected state. The **"Grand Total"** row calculates the average annual change for each state across the available years.
+
+While these YoY values were not directly visualized in the dashboard, they were used during analysis to explore how consistently or dramatically **smoking** rates changed over time. The pivot table complements the core dataset by summarizing directional trends that can support deeper insights or future recommendations.
+
+* **Note:** **Florida** lacks data for **2021**, resulting in fewer years (8 years instead of 10) of available data for YoY calculations compared to other states. This may slightly impact the average annual change shown in the Grand Total row.
 
 
 ## Depression Tab
@@ -100,7 +116,15 @@ Conditional formatting highlights individual data points based on whether they a
 This formatting helps visually emphasize values that deviate from the 10-year average, aiding quick comparison across states and years.
 
 ## DEPT Tab (Depression Pivot Table)
+This tab contains a pivot table summarizing **depression** prevalence from 2012 to 2022 across the five selected U.S. states **(CA, TX, FL, NY, PA)**. The table displays average values by year and state, with the **Grand Total row showing the overall 10-year average for each state** and the **Grand Total column showing national averages.**
 
+The national and state-level averages calculated through this pivot table **match** the values computed using AVERAGEIFS formulas in the corresponding indicator tab **(depression)**. This validates consistency across methods.
+
+Even though only the overall national averages were used in the final visualization, state-specific averages were calculated to explore internal patterns and to support cross-state comparisons in the exploratory phase.
 
 ## DEYPT Tab (Depression YoY Pivot Table)
+This pivot table displays the **year-over-year (YoY) percentage changes** in **depression** rates from 2012 to 2022, organized by state. Each row corresponds to a year, and each column represents a selected state. The **"Grand Total"** row calculates the average annual change for each state across the available years.
 
+While these YoY values were not directly visualized in the dashboard, they were used during analysis to explore how consistently or dramatically **depression** rates changed over time. The pivot table complements the core dataset by summarizing directional trends that can support deeper insights or future recommendations.
+
+* **Note:** **Florida** lacks data for **2021**, resulting in fewer years (8 years instead of 10) of available data for YoY calculations compared to other states. This may slightly impact the average annual change shown in the Grand Total row.
