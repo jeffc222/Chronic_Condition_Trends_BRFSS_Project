@@ -1,4 +1,4 @@
--- Step 1: Filter relevant data
+-- Step 1: Filter relevant datas
 -- Description: Extracts crude prevalence values (2012–2022) for 5 selected states across 4 health indicators: Obesity, Diabetes, Smoking, and Depression
 
 WITH filtered_brfss AS (
