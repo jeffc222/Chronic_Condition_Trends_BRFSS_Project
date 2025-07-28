@@ -74,7 +74,7 @@ Organizing the dataset in Google Sheets provided a structured and interactive en
 
 This step also enabled early identification of data gaps and anomalies, such as Florida’s missing 2021 values, which were flagged and considered in interpretation. Leveraging spreadsheets for pre-visualization processing reflects common workflows in analytics teams and enhances auditability, transparency, and collaboration throughout the project.
 
-For a full breakdown of each tab—including descriptions, formulas used, and conditional formatting logic—see the dedicated documentation [here](sheets/spreadsheets_documentation.md).
+For a full breakdown of each tab—including descriptions, formulas used, and conditional formatting logic—see the dedicated documentation [here](sheets/spreadsheet_documentation.md).
 
 --- 
 
@@ -94,7 +94,7 @@ This simplification ensured a cleaner Tableau interface, free from metric redund
 
 * **Visualization Strategy:** The streamlined dataset was imported into Tableau, where the focus was placed on producing clear, comparative visuals across the four health conditions. Line charts were used to display each condition’s trend over time by state. A  filter was added to allow users to toggle between states for each condition-specific chart.
 
-A constant line was also added to represent the 10-year national average for each indicator, serving as a benchmark for comparison. Custom labels and tooltips were included to support quick interpretation and provide context to non-technical viewers.
+A constant dashed line was also added to represent the 10-year national average for each indicator, serving as a benchmark for comparison. Custom labels and tooltips were included to support quick interpretation and provide context to non-technical viewers.
 
 * **Rationale:** Simplifying the dataset allowed for a more focused and intuitive visualization experience. By prioritizing absolute prevalence values over derived metrics, the visualizations remained accessible to a broader audience while still supporting meaningful trend comparisons. This approach mirrors common dashboard development practices, where clarity, usability, and stakeholder relevance are key.
 
