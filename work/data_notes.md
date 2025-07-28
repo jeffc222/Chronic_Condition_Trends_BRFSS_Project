@@ -3,9 +3,12 @@ This project investigates time trends in chronic health conditions using the **C
 
 The analysis combines **SQL, Google Sheets,** and **Tableau** to clean, process, visualize, and interpret multi-year health prevalence data. This documentation outlines the thought process, step-by-step decisions, and technical methodology that guided the project from raw data to final insights.
 
+## Summary
+This file outlines the full workflow behind the BRFSS chronic condition analysis project, documenting how raw survey data was transformed into clean, structured, and visual-ready insights. It covers SQL extraction and transformation, spreadsheet-based calculations and validation, and Tableau dashboard preparation. Each step reflects best practices in analytical documentation and mirrors common workflows in real-world healthcare analytics roles.
+
 --- 
 
-## Step 1: Data Extraction (SQL via BigQuery)
+# Step 1: Data Extraction (SQL via BigQuery)
 **Objective:** Filter for relevant data by year, location, and health indicators
 
 **Key Criteria:**
@@ -36,9 +39,11 @@ The analysis combines **SQL, Google Sheets,** and **Tableau** to clean, process,
 *Rationale:*
 This modular, multi-CTE SQL approach was chosen for clarity, performance, and reusability. Filtering early reduces data volume, improving efficiency. Pivoting the indicators into columns using **MAX(CASE WHEN...)** makes the dataset easier to analyze and visualize downstream. Calculating YoY changes through a self-join enables longitudinal comparisons while preserving the row-level structure. Sorting the final output by state and year ensures intuitive chronological readability for both manual review and spreadsheet-based analysis.
 
+Full SQL code can be found [here](sql_queries.sql).
+
 --- 
 
-## Step 2: Data Processing (Google Sheets)
+# Step 2: Data Processing (Google Sheets)
 **Objective:** Organize and explore the SQL-exported dataset using spreadsheet tools for further analysis, validation, and visualization preparation
 
 **Key Tabs & Structure:**
@@ -69,9 +74,11 @@ Organizing the dataset in Google Sheets provided a structured and interactive en
 
 This step also enabled early identification of data gaps and anomalies, such as Florida’s missing 2021 values, which were flagged and considered in interpretation. Leveraging spreadsheets for pre-visualization processing reflects common workflows in analytics teams and enhances auditability, transparency, and collaboration throughout the project.
 
+For a full breakdown of each tab—including descriptions, formulas used, and conditional formatting logic—see the dedicated documentation [here](sheets/spreadsheets_documentation.md).
+
 --- 
 
-## Step 3: Data Preparation & Visualization in Tableau
+# Step 3: Data Preparation & Visualization in Tableau
 * **Objective:** Create intuitive and informative trend visualizations for each health indicator across five states using a simplified dataset
 
 * **Dataset Simplification for Tableau:** To prepare the dataset for visualization, all derived metrics such as prior-year values and year-over-year (YoY) percentage change columns were excluded. This left only the essential columns required for trend analysis:
@@ -91,10 +98,11 @@ A constant line was also added to represent the 10-year national average for eac
 
 * **Rationale:** Simplifying the dataset allowed for a more focused and intuitive visualization experience. By prioritizing absolute prevalence values over derived metrics, the visualizations remained accessible to a broader audience while still supporting meaningful trend comparisons. This approach mirrors common dashboard development practices, where clarity, usability, and stakeholder relevance are key.
 
+The finalized Tableau dashboard can be viewed [here](https://public.tableau.com/views/brfss2/ChronicConditionTrendsinFiveU_S_States2012-2022?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link).
 
 ---
 
-### 📌 Florida Data Caveat (Missing 2021)
+## 📌 Florida Data Caveat (Missing 2021)
 Florida did not meet the CDC’s data collection requirements for BRFSS in 2021 and was therefore excluded from the official 2021 annual dataset. According to the CDC: "Florida was unable to collect BRFSS data over enough months to meet the minimum requirements for inclusion in the 2021 annual aggregate data set." — [CDC BRFSS 2021 Comparison Report PDF](https://www.cdc.gov/brfss/annual_data/2021/pdf/compare_2021-508.pdf)
 
 **Impact on Analysis:**
@@ -106,7 +114,7 @@ This gap in Florida’s data was acknowledged and factored into comparative anal
 
 ---
 
-## Step 5: Insights and Decision Points
+# Step 5: Insights and Decision Points
 Several analytical decisions were informed by both data limitations and the scope of the project:
 * **YoY Metrics:** Year-over-year percentage changes were not included in the Tableau dashboard, but the pivot tables remain valuable for interpreting directional shifts and will be referenced in future recommendations or insights where appropriate.
 * **Florida’s Missing 2021 Data:** As detailed above, this affects both regular and YoY averages and was factored into interpretation when comparing trends across states.
