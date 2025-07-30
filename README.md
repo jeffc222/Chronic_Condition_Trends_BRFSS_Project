@@ -21,7 +21,7 @@ The dataset originates from the CDC BRFSS (Behavioral Risk Factor Surveillance S
 
 These indicators were selected for their consistency across BRFSS and CDC PLACES reporting and their relevance to both physical and behavioral health. Crude prevalence rates were used for comparability with other public datasets and to simplify interpretation for non-technical stakeholders.
 
-
+![table](images/brfsstable.png)
 
 
 
