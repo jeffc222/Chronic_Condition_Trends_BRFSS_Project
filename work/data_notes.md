@@ -26,9 +26,9 @@ This file outlines the full workflow behind the BRFSS chronic condition analysis
 *Rationale:*
 * **Crude Prevalence:** Crude prevalence values reflect raw estimates without adjustments for age or demographic weighting. These unadjusted figures are directly comparable across years and are consistent with the format used in the CDC PLACES Local 2024 dataset.
 * **Overall:** This ensures the dataset reflects population-wide estimates rather than subgroups (e.g., by gender or race), simplifying comparisons across states and reducing noise from demographic variance.
-* **2012 to 2022:** This decade spans the most recent, complete 11-year period available that aligns closely with the 2024 CDC PLACES Loacl release which uses 2022 BRFSS data. 
+* **2012 to 2022:** This decade spans the most recent, complete 11-year period available that aligns closely with the 2024 CDC PLACES Local release which uses 2022 BRFSS data. 
 * **CA, TX, FL, NY, PA:** These five states were chosen due to their large and diverse populations, ensuring broader representativeness. Their size and geographic spread also allow for meaningful comparisons across regions with varying health trends and public health infrastructures.
-* **Obesity, Diabetes, Smoking, Depression:** These four represent a mix of physical and behavioral health metrics and are consistently reported across both BRFSS and CDC PLACES datasets, allowing for comparative and longitudinal analysis across projects.
+* **Obesity, Diabetes, Smoking, Depression:** These four indicators were selected to capture a balance between physical (obesity and diabetes) and behavioral (smoking and depression) health trends, allowing for holistic evaluation of chronic disease burden.
 
 **SQL Approach:**
 1. Filter relevant rows using **WHERE** clauses targeting indicator, response type, and state-year constraints.
@@ -39,7 +39,7 @@ This file outlines the full workflow behind the BRFSS chronic condition analysis
 *Rationale:*
 This modular, multi-CTE SQL approach was chosen for clarity, performance, and reusability. Filtering early reduces data volume, improving efficiency. Pivoting the indicators into columns using **MAX(CASE WHEN...)** makes the dataset easier to analyze and visualize downstream. Calculating YoY changes through a self-join enables longitudinal comparisons while preserving the row-level structure. Sorting the final output by state and year ensures intuitive chronological readability for both manual review and spreadsheet-based analysis.
 
-Full SQL code can be found [here](sql_queries.sql).
+[View SQL queries]sql_queries.sql).
 
 --- 
 
@@ -57,13 +57,13 @@ Full SQL code can be found [here](sql_queries.sql).
     * =D2>$D$13 → Above national average
     * =D2<=$D$13 → Below national average
   * These formatting rules made trends immediately visible for visual review.
-* **Pivot Tables (opt, dipt, spt, dept):** Pivot tables were used to cross-validate the average calculations. Grand Totals in each pivot matched the AVERAGEIFS results from earlier tabs, reinforcing confidence in data quality and spreadsheet fluency. Example:
+* **OPT, DIPT, SPT, DEPT (e.g. Obesity Pivot Tables):** Pivot tables were used to cross-validate the average calculations. Grand Totals in each pivot matched the AVERAGEIFS results from earlier tabs, reinforcing confidence in data quality and spreadsheet fluency. Example:
   * National Average: =AVERAGEIFS(D2:D, D2:D, "<>")
   * State Average (e.g. CA): =AVERAGEIFS(D2:D, B2:B, "CA", D2:D, "<>")
 
   The inclusion of both formula-based and pivot table-based calculations demonstrates a well-rounded understanding of when to apply each method. Formulas are used for quick and flexible checks, while pivot tables are used for structured aggregation, filtering, and presentation.
-* **YoY Pivot Tables (oypt, diypt, sypt, deypt):** Year-over-year percent change values were organized into pivot tables by state and year. Though not included in the final visualizations, they revealed trends such as:
-  * Florida’s depression rate showed a slight overall decline, in contrast to rising rates in other states.
+* **OYPT, DIYPT, SYPT, DEYPT (e.g. Obesity YoY Pivot Tables):** Year-over-year percent change values were organized into pivot tables by state and year. Though not included in the final visualizations, they revealed trends such as:
+  * Mild decline in Florida's depression rate, which contrasted with rising trends elsewhere
   * Smoking showed consistent YoY declines across all states.
   * Obesity and diabetes showed consistent positive growth in most areas.
 
