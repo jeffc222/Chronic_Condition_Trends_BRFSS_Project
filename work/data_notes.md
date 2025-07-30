@@ -28,7 +28,7 @@ This file outlines the full workflow behind the BRFSS chronic condition analysis
 * **Overall:** This ensures the dataset reflects population-wide estimates rather than subgroups (e.g., by gender or race), simplifying comparisons across states and reducing noise from demographic variance.
 * **2012 to 2022:** This decade spans the most recent, complete 11-year period available that aligns closely with the 2024 CDC PLACES Loacl release which uses 2022 BRFSS data. 
 * **CA, TX, FL, NY, PA:** These five states were chosen due to their large and diverse populations, ensuring broader representativeness. Their size and geographic spread also allow for meaningful comparisons across regions with varying health trends and public health infrastructures.
-* **Obesity, Diabetes, Smoking, Depression:** These four represent a mix of physical and behavioral health metrics and are consistently reported across both BRFSS and PLACES datasets, allowing for comparative and longitudinal analysis across projects.
+* **Obesity, Diabetes, Smoking, Depression:** These four represent a mix of physical and behavioral health metrics and are consistently reported across both BRFSS and CDC PLACES datasets, allowing for comparative and longitudinal analysis across projects.
 
 **SQL Approach:**
 1. Filter relevant rows using **WHERE** clauses targeting indicator, response type, and state-year constraints.
