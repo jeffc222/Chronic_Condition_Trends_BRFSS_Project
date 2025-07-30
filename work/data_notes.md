@@ -4,7 +4,7 @@ This project investigates time trends in chronic health conditions using the **C
 The analysis combines **SQL, Google Sheets,** and **Tableau** to clean, process, visualize, and interpret multi-year health prevalence data. This documentation outlines the thought process, step-by-step decisions, and technical methodology that guided the project from raw data to final insights.
 
 ## Summary
-This file outlines the full workflow behind the BRFSS chronic condition analysis project, documenting how raw survey data was transformed into clean, structured, and visual-ready insights. It covers SQL extraction and transformation, spreadsheet-based calculations and validation, and Tableau dashboard preparation. Each step reflects best practices in analytical documentation and mirrors common workflows in real-world healthcare analytics roles.
+This file outlines the full workflow behind the BRFSS chronic condition analysis project, documenting how raw survey data was transformed into clean, visual-ready insights. It covers SQL extraction and transformation, spreadsheet-based calculations and validation, and Tableau dashboard preparation. Each step reflects best practices in analytical documentation and mirrors common workflows in real-world healthcare analytics roles.
 
 --- 
 
@@ -103,10 +103,10 @@ The finalized Tableau dashboard can be viewed [here](https://public.tableau.com/
 ---
 
 ## 📌 Florida Data Caveat (Missing 2021)
-Florida did not meet the CDC’s data collection requirements for BRFSS in 2021 and was therefore excluded from the official 2021 annual dataset. According to the CDC: "Florida was unable to collect BRFSS data over enough months to meet the minimum requirements for inclusion in the 2021 annual aggregate data set." — [CDC BRFSS 2021 Comparison Report PDF](https://www.cdc.gov/brfss/annual_data/2021/pdf/compare_2021-508.pdf)
+Florida did not meet the CDC’s data collection requirements for BRFSS in 2021 and was therefore excluded from the official 2021 annual dataset. According to the CDC: "Florida was unable to collect BRFSS data over enough months to meet the minimum requirements for inclusion in the 2021 annual aggregate data set." — [CDC BRFSS 2021 Comparison Report PDF](https://www.cdc.gov/brfss/annual_data/2021/pdf/compare_2021-508.pdf) No additional states or indicators had missing years or reporting gaps in the filtered BRFSS dataset for 2012-2022. Florida was the only exception explicitly omitted by CDC.
 
 **Impact on Analysis:**
-* **Standard Averages:** Florida’s indicator averages (e.g., obesity, smoking) were calculated over 10 years (2012–2020, 2022), instead of 11 for the other states
+* **Standard Averages:** Florida’s indicator averages (e.g., obesity, smoking) were calculated over 10 years (excluding 2021), instead of 11.
 * **YoY Averages:** Year-over-year changes span only 8 intervals (2013–2022), compared to 10 for others
 * **No Imputation Used:** This missing year was not filled or adjusted for; the discrepancy was documented in relevant spreadsheet tabs and accounted for in final insights
 
@@ -116,7 +116,8 @@ This gap in Florida’s data was acknowledged and factored into comparative anal
 
 # Step 5: Insights and Decision Points
 Several analytical decisions were informed by both data limitations and the scope of the project:
-* **YoY Metrics:** Year-over-year percentage changes were not included in the Tableau dashboard, but the pivot tables remain valuable for interpreting directional shifts and will be referenced in future recommendations or insights where appropriate.
 * **Florida’s Missing 2021 Data:** As detailed above, this affects both regular and YoY averages and was factored into interpretation when comparing trends across states.
 * **Pivot Table Usage:** Pivot tables were used to validate manual calculations and supported internal QA. They reinforced understanding of multiple calculation approaches (formula-based vs. aggregation) and strengthened confidence in final values used for visualization.
+* **YoY Metrics:** Year-over-year percentage changes were not included in the Tableau dashboard, but the pivot tables remain valuable for interpreting directional shifts and will be referenced in future recommendations or insights where appropriate.
+  
 
