@@ -3,12 +3,12 @@
 ## Overview
 This project analyzes 10 years of trends in four major chronic health conditions: **obesity, diabetes, smoking, and depression**. Public health data from the **[CDC Behavioral Risk Factor Surveillance System (BRFSS)](data/data_link.md)** was used to examine changes from 2012 to 2022 across the five most populous U.S. states: **California, Texas, Florida, New York, and Pennsylvania.** 
 
-The goal is to identify long-term shifts in health outcomes, compare state-level patterns to national averages, and pinpoint areas where public health efforts may be most needed. The analysis is designed to help health agencies and decision-makers respond to emerging trends. 
+The goal is to uncover long-term shifts in health outcomes, compare state-level patterns against the five-state average, and pinpoint areas where public health efforts may be most needed. The analysis is designed to help health agencies and decision-makers respond to emerging trends. 
 
 ## Objectives
 * Track how **obesity, diabetes, smoking, and depression** changed from 2012 to 2022
 * Compare chronic health trends across five of the most populous U.S. states
-* Identify states that consistently perform above or below national averages
+* Identify states that consistently perform above or below the five-state average
 * Highlight shifts that may require targeted public health action
 * Visualize state-level trends through an interactive dashboard designed for public health insights
 
@@ -19,10 +19,10 @@ The final dataset includes:
 * **Timeframe:** 2012–2022 (excluding Florida in 2021 due to official CDC omission)
 * **States:** California, Texas, Florida, New York, and Pennsylvania
 * **Indicators:** Obesity, Diabetes, Smoking, Depression
-* **Measure Type:** Crude Prevalence
 * **Population Group:** Overall (no demographic subgroups)
+* **Measure Type:** Crude Prevalence
 
-The original BRFSS data was structured in **long format**, with each row representing a unique combination of year, state, condition, and prevalence value. Using SQL, the data was pivoted into **wide format**, where each row corresponded to a single year-state pair with separate columns for each health indicator. A **self-join** was applied to calculate **prior-year values** and **year-over-year (YoY) percentage changes**, supporting multi-year comparisons across all five states. 
+The original BRFSS data was structured in **long format**, with each row representing a unique combination of year, state, condition, and prevalence value. Using SQL, the data was pivoted into **wide format**, one row per state-year with separate columns for each health indicator. A **self-join** was applied to calculate **prior-year values** and **year-over-year (YoY) percentage changes**, supporting multi-year comparisons across all five states. 
 
 For detailed filtering logic and SQL transformation steps, see [notes](work/data_notes.md).
 
@@ -37,16 +37,17 @@ Public BRFSS data was queried directly from Google Cloud's BigQuery platform. Th
   * **Years:** 2012–2022
   * **Population Group:** Overall
   * **Measure Type:** Crude Prevalence
-Common Table Expressions (CTEs) were used to structure intermediate transformation steps, and a pivot operation using (MAX(CASE WHEN...)) reshaped the data from long to wide format, with one column for each health condition. A self-join was performed to calculate prior-year values and year-over-year (YoY) percentage changes. The resulting table was sorted by year and state to support trend analysis and exported to Google Sheets for further refinement. 
+
+Common Table Expressions (CTEs) were used to organize intermediate transformation steps, and a pivot operation using (MAX(CASE WHEN...)) reshaped the data from long to wide format, with a column for each health condition. A self-join was performed to calculate prior-year values and year-over-year (YoY) percentage changes. The resulting table was sorted by year and state to support trend analysis and exported to Google Sheets for final processing. 
 
 [View SQL queries](work/sql_queries.sql)
 
 
 ### Data Processing (Google Sheets)
-The exported dataset was processed in Google Sheets to finalize calculations and prepare visualization. Key steps included:
+The exported dataset was processed in Google Sheets to finalize calculations and prepare the visualization. Key steps included:
 * Applied conditional formatting to flag increases and decreases
 * Calculated YoY percent changes by state and condition
-* Structured individual tabs by condition for clearer analysis
+* Organized separate tabs for each condition to simplify analysis
 * Created pivot tables for trend summaries and internal validation
 * Handled Florida's missing 2021 data by adjusting averaging logic
 
@@ -55,13 +56,13 @@ The exported dataset was processed in Google Sheets to finalize calculations and
 
 ### Dashboard Development (Tableau)
 An interactive dashboard was built in Tableau to help stakeholders explore state-level trends. The dashboard includes:
-* Built interactive line charts to visualize decade-long condition trends
-* Integrated a dashed reference line to benchmark each trend against the **five-state average**
+* Built interactive line charts showing condition-specific changes over time
+* Added a dashed reference line to benchmark each trend against the **five-state average**
 * Enabled unified filtering by state across all charts for seamless comparison
-* Included clean tooltips showing year, state, and prevalence for clarity
+* Displayed clean tooltips showing the year, state, and prevalence values
 
 ## Visualizations
-The Tableau dashboard illustrates decade-long trends in chronic conditions across five high-population states. Each condition is displayed in a side-by-side line chart, with a single dropdown filter that dynamically updates all charts and allows quick, consistent comparison across indicators. A constant dashed line provides the five-state average as a visual benchmark. 
+The Tableau dashboard illustrates decade-long trends in chronic conditions across the five most populous U.S. states. Each condition is displayed in a side-by-side line chart, with a unified dropdown filter that updates all charts simultaneously. A dashed reference line shows the five-state average as a benchmark.
 
 **Interactive Dashboard**
 Explore trends by selecting a state using the filter at the top of the dashboard. Each line chart updates to reflect that state's trajectory over time. 
@@ -69,32 +70,18 @@ Explore trends by selecting a state using the filter at the top of the dashboard
 [View the interactive dashboard here](https://public.tableau.com/views/brfss2/ChronicConditionTrendsinFiveU_S_States2012-2022?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link).
 
 **Static Preview**
-A full static preview of the dashboard is available for reference.
+A static preview of the full dashboard is available below.
 
 ![brfsschart](images/brfssgeneral.png)
 
 
-
-
 ## Major Insights
-* Obesity and diabetes steadily increased across all five states from 2012 to 2022, with Texas and Pennsylvania showing the steepest rises.
-* Smoking declined in all states, with California and New York leading in reduction, suggesting effective anti-smoking initiatives.
-* Depression rates rose across all five states, most sharply in New York and Florida, indicating growing mental health challenges during the last decade.
-* Texas consistently showed higher-than-average rates in all four indicators, while California maintained the lowest obesity and smoking rates throughout the period.
-* These trends reflect long-term shifts that carry serious implications for healthcare systems, state policies, and local community health initiatives.
-
-Key Insights
-Obesity and diabetes rates steadily increased across most states, especially in Texas and Pennsylvania, pointing to rising metabolic and lifestyle health risks.
-
-Smoking declined in all five states over the decade, with California and New York leading the reductions—suggesting strong public health policy impact.
-
-Depression prevalence increased across the board, most notably in Florida and New York, indicating a potential surge in behavioral health needs.
-
-Texas consistently exhibited above-average rates across all four indicators, while California remained below the national average in obesity and smoking throughout the 10-year period.
-
-Florida’s 2021 data was officially excluded from BRFSS, but this gap was documented and accounted for in calculations and interpretations.
-
-These trends reflect widening disparities and changing burdens across both physical and mental health domains.
+* **Obesity and diabetes** steadily increased from 2012 to 2022 across all five states. Texas and Pennsylvania experienced the steepest rises, signaling elevated long-term risks tied to metabolic and lifestyle-related conditions.
+* **Smoking** declined in every state, with **California and New York** showing the most significant reductions—highlighting the impact of sustained anti-smoking policies and public health efforts.
+* **Depression** rates rose across the board, most sharply in New York and Florida, underscoring growing behavioral health needs and the increasing demand for mental health services.
+* **Texas** consistently reported above-average rates for all four health indicators, while California maintained the lowest rates of obesity and smoking throughout the decade.
+* The exclusion of **Florida’s 2021 data,** due to official BRFSS omission, was accounted for in all trend calculations to ensure accurate comparisons.
+* These patterns reflect widening disparities in chronic and mental health burdens, with implications for future healthcare costs, state resource allocation, and targeted intervention strategies.
 
 
 
