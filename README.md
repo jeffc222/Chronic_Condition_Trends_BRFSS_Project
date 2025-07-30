@@ -31,13 +31,13 @@ For detailed filtering logic and SQL transformation steps, see [notes](work/data
 
 ## Technical Process
 ### Data Extraction (SQL)
-Public BRFSS data was queried directly from Google Cloud's BigQuery platform. The fitlering criteria included:
+Public BRFSS data was queried directly from Google Cloud's BigQuery platform. The filtering criteria included:
   * **Indicators:** Obesity, Diabetes, Smoking, Depression
   * **States:** CA, TX, FL, NY, PA
   * **Years:** 2012–2022
   * **Population Group:** Overall
   * **Measure Type:** Crude Prevalence
-Common Table Expressions (CTEs) were used to organize logic, and pivot logic (MAX(CASE WHEN...)) was applied to reshaped the data into wide format. A self-join was performed to calculate prior-year values and year-over-year (YoY) percentage changes. The cleaned dataset was sorted by year and state, then exported to Google Sheets for further processing.
+Common Table Expressions (CTEs) were used to structure intermediate transformation steps, and a pivot operation using (MAX(CASE WHEN...)) reshaped the data from long to wide format, with one column for each health condition. A self-join was performed to calculate prior-year values and year-over-year (YoY) percentage changes. The resulting table was sorted by year and state to support trend analysis and exported to Google Sheets for further refinement. 
 
 [View SQL queries](work/sql_queries.sql)
 
@@ -46,46 +46,32 @@ Common Table Expressions (CTEs) were used to organize logic, and pivot logic (MA
 The exported dataset was processed in Google Sheets to finalize calculations and prepare visualization. Key steps included:
 * Applied conditional formatting to flag increases and decreases
 * Calculated YoY percent changes by state and condition
-* Segmented data by condition for focused review
+* Structured individual tabs by condition for clearer analysis
 * Created pivot tables for trend summaries and internal validation
 * Handled Florida's missing 2021 data by adjusting averaging logic
-
 
 [View spreadsheet and notes](work/spreadsheet)
 
 
-### Visualization (Tableau)
+### Dashboard Development (Tableau)
 An interactive dashboard was built in Tableau to help stakeholders explore state-level trends. The dashboard includes:
-* Created interactive line charts to visualize 10-year trends by condition and state
-* Added a constant dashed line to show the 5-state average as a benchmark
-* Enabled filtering by state for flexible comparison
-* Kept tooltips simple and clean to highlight year, state, and prevalence value
+* Built interactive line charts to visualize decade-long condition trends
+* Integrated a dashed reference line to benchmark each trend against the **five-state average**
+* Enabled unified filtering by state across all charts for seamless comparison
+* Included clean tooltips showing year, state, and prevalence for clarity
 
 ## Visualizations
-This project's final output is a Tableau dashboard designed to explore 10-year trneds across four key chronic health indicators- obesity, diabetes, smoking, and depression- in five U.S. states. Visualizaitons were structured to support side-by-side comparions and focused state-level analysis. 
+The Tableau dashboard illustrates decade-long trends in chronic conditions across five high-population states. Each condition is displayed in a side-by-side line chart, with a single dropdown filter that dynamically updates all charts and allows quick, consistent comparison across indicators. A constant dashed line provides the five-state average as a visual benchmark. 
 
-**Interactive Dahsboard**
-Explore dynamic line charts by condition and state, with fitler controls and "national" average benchmarks:
+**Interactive Dashboard**
+Explore trends by selecting a state using the filter at the top of the dashboard. Each line chart updates to reflect that state's trajectory over time. 
+
 [View the interactive dashboard here](https://public.tableau.com/views/brfss2/ChronicConditionTrendsinFiveU_S_States2012-2022?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link).
 
-**Condition-Specific Line Charts**
-Small multiple views (one per condition) allow users to:
-* Compare each state's trend over time
-* Spot diverging or converging trajectories
-* Assess shifts relative to the group average
+**Static Preview**
+A full static preview of the dashboard is available for reference.
 
-Each chart includes:
-* State-level fitler dropdown
-* Dashed reference line representing the 10-year average across all five states
-* Clear axis labels and hover tooltips for value lookup
-
- **Static Chart Previews**
- Preview each condition trends below:
-
-
-
-
-
+![brfsschart](images/brfssgeneral.png)
 
 
 
