@@ -76,15 +76,11 @@ A static preview of the full dashboard is available below.
 
 
 ## Major Insights
-* **Obesity and diabetes** steadily increased from 2012 to 2022 across all five states. Texas and Pennsylvania experienced the steepest rises, signaling elevated long-term risks tied to metabolic and lifestyle-related conditions.
-* **Smoking** declined in every state, with **California and New York** showing the most significant reductions—highlighting the impact of sustained anti-smoking policies and public health efforts.
-* **Depression** rates rose across the board, most sharply in New York and Florida, underscoring growing behavioral health needs and the increasing demand for mental health services.
-* **Texas** consistently reported above-average rates for all four health indicators, while California maintained the lowest rates of obesity and smoking throughout the decade.
-* The exclusion of **Florida’s 2021 data,** due to official BRFSS omission, was accounted for in all trend calculations to ensure accurate comparisons.
-* These patterns reflect widening disparities in chronic and mental health burdens, with implications for future healthcare costs, state resource allocation, and targeted intervention strategies.
-
-
-
+* **Obesity** increased in all five states, with **New York** showing the largest rise, followed by **Texas.** **California** had the smallest increase over the decade.
+* **Diabetes** rates rose most in **Texas and California**, while **Florida** experienced the smallest increase.
+* **Smoking** declined in every state. **Texas and New York** had the steepest reductions, while **Florida** showed the least improvement.
+* **Depression** increased in all states except **Florida**, with the sharpest rises in **California and Texas.**
+* **Texas** ranked in the **top two across all indicators** based on total change over the decade, reflecting consistent large shifts in health trends. 
 
 
 ## Recommendations 
