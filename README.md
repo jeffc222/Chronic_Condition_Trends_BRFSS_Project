@@ -115,18 +115,3 @@ A static preview of the full dashboard is available below.
 ## Disclaimer
 This project is for educational and portfolio purposes only. The dataset is publicly available from the [CDC Behavioral Risk Factor Surveillance System (BRFSS)](data/data_link.md). All rights and data belong to the original source.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
