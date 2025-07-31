@@ -6,7 +6,7 @@ This tab contains the full cleaned dataset exported from BigQuery and serves as 
 
 For each condition, this dataset also includes the **prior year’s value** and the **calculated year-over-year (YoY) percent change**, allowing for clear comparisons over time. Although these columns are grouped by type (all current years, all prior-year values, then all YoY changes), they support accurate trend analysis and helped inform both summary statistics and Tableau visualizations.
 
-![original](images/brfssog.png)
+![og](images/brfssog.png)
 
 ## Summary Tab
 This tab presents 10-year average prevalence values (2012–2022) for four chronic conditions—**obesity, diabetes, smoking,** and **depression**—across five U.S. states **(CA, TX, FL, NY, PA)**. A top "National" row calculates the average across all five states for each indicator, serving as a reference benchmark.
