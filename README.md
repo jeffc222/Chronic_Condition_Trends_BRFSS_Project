@@ -52,7 +52,7 @@ The exported dataset was processed in Google Sheets to finalize calculations and
 * Created **pivot tables** for trend summaries and internal validation
 * Handled Florida's missing 2021 data by adjusting averaging logic
 
-[View spreadsheet and notes](work/sheet)
+[View spreadsheet and notes](work/sheets)
 
 ### Dashboard Development (Tableau)
 An interactive dashboard was built in Tableau to help stakeholders explore state-level trends. The dashboard includes:
@@ -68,7 +68,7 @@ The Tableau dashboard illustrates decade-long trends in chronic conditions acros
 **Interactive Dashboard**
 Explore trends by selecting a state using the filter at the top of the dashboard. Each line chart updates to reflect that state's trajectory over time. 
 
-[View the interactive dashboard here](https://public.tableau.com/views/brfss2/ChronicConditionTrendsinFiveU_S_States2012-2022?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link).
+[View the interactive dashboard here](https://public.tableau.com/views/brfss2/ChronicConditionTrendsinFiveU_S_States2012-2022?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
 **Static Preview**
 A static preview of the full dashboard is available below.
