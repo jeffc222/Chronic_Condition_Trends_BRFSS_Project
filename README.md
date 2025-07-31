@@ -77,25 +77,22 @@ A static preview of the full dashboard is available below.
 
 
 ## Major Insights
-* **Obesity** increased in all five states, with **New York** showing the largest rise, followed by **Texas.** **California** had the smallest increase over the decade.
-* **Diabetes** rates rose most in **Texas and California**, while **Florida** experienced the smallest increase.
-* **Smoking** declined in every state. **Texas and New York** had the steepest reductions, while **Florida** showed the least improvement.
-* **Depression** increased in all states except **Florida**, with the sharpest rises in **California and Texas.**
-* **Texas** ranked in the **top two across all indicators** based on total change over the decade, reflecting consistent large shifts in health trends.
-
+* **New York** saw the largest increase in **obesity** (+6.5 percentage points), followed closely by **Florida and Texas**, indicating mounting lifestyle-related health challenges in these states.
+* **Diabetes** rose most sharply in **Texas**, while **Florida** experience the smallest increase.
+* **Smoking** decline across all states, with **Pennsylvania** showing the greatest drop (-6.5 percentage points), followed by **Texas and Florida** (-6.4 percentage points).
+* **Depression** increased in all five states, with **Californias** leading and **Florida** having a modest increase.
+* **Texas and California** had the **lowest average ranking scores**, relfecting the **most consistently large shifts** in chronic condition indicators over the decade. 
 
 ## Recommendations 
-* **Address Obesity and Diabetes Trends:** Prioritize prevention and management programs in **Texas, New York, and California,** where obesity and diabetes showed the most significant increases.
-* **Expand Mental Health Services:** Allocate behavioral health resources in **California and Texas,** which saw the sharpest rises in depression, and monitor Florida for future changes.
-* **Reinforce Smoking Reduction Efforts:** Continue supporting anti-smoking initiatives in **Texas and New York,** where the steepest declines occurred, while increasing attention in Florida due to limited progress.
-* **Leverage Ongoing Data Monitoring:** Use annual BRFSS releases to track shifts in health indicators and adjust state-level strategies based on updated trends.
-
+* **Strengthen Prevention in High-Change States:** Focus **obesity and diabetes** prevention campaigns in **Texas, California, and New York,** where aboslute changes were the highest.
+* **Expand Behavioral Health Resources:** Prioritize mental health funding in **California and Texas,** given the notable rise in depression.
+* **Reinforce Anti-Smoking Effects in California:** Despite national progress, California lagged in smoking reduction and may benefit from renewed prevention efforts. 
+* **Leverage Annual BRFSS Data:** Integrate yearly BRFSS updates into local dashboards to monitor shifts and target interventions in real time.
 
 ## Action Plan
-* **Share Insights with Stakeholders:** Present dashboard findings to state health departments, policy teams, and advocacy groups for awareness and alignment.
-* **Tailor Interventions by Region:** Deploy condition-specific campaigns that reflect each state’s trend profile and target high-need areas.
-* **Maintain and Update Tools:** Refresh visualizations annually with new BRFSS data to support long-term planning and evaluate intervention impact.
-
+* **Report Findings:** Share dashboards and key insights with state-level public health departments and policy leads.
+* **Target Interventions:** Deploy region-specific health campaigns based on each state's condition trends and ranking profile.
+* **Refine Over Time:** Refresh dashboards and re-run analysis annually as new BRFSS data becomes available. 
 
 ## Repository Contents
 * README.md – Project overview, technical steps, insights, and recommendations
