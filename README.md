@@ -40,7 +40,7 @@ Public BRFSS data was queried directly from Google Cloud's BigQuery platform. Th
   * **Population Group:** Overall
   * **Measure Type:** Crude Prevalence
 
-Common Table Expressions (CTEs) were used to organize intermediate transformation steps, and a pivot operation using (MAX(CASE WHEN...)) reshaped the data from long to wide format, with a column for each health condition. A self-join was performed to calculate prior-year values and year-over-year (YoY) percentage changes. The resulting table was sorted by year and state to support trend analysis and exported to Google Sheets for final processing. 
+**Common Table Expressions (CTEs)** were used to organize intermediate transformation steps, and a **pivot operation using (MAX(CASE WHEN...))** reshaped the data from long to wide format, with a column for each health condition. A **self-join** was performed to calculate **prior-year values** and **year-over-year (YoY) percentage changes**. The resulting table was sorted by year and state to support trend analysis and exported to Google Sheets for final processing. 
 
 [View SQL queries](work/sql_queries.sql)
 
