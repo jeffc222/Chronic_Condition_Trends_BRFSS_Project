@@ -62,7 +62,7 @@ An interactive dashboard was built in Tableau to help stakeholders explore state
 * Displayed clean tooltips showing the year, state, and prevalence values
 
 
-## Visualizations
+## Visualization
 The Tableau dashboard illustrates decade-long trends in chronic conditions across the five most populous U.S. states. Each condition is displayed in a side-by-side line chart, with a unified dropdown filter that updates all charts simultaneously. A dashed reference line shows the five-state average as a benchmark.
 
 **Interactive Dashboard**
