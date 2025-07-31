@@ -114,7 +114,7 @@ This gap in Florida’s data was acknowledged and factored into comparative anal
 
 ---
 
-# Step 5: Insights and Decision Points
+# Step 5: Limitations and Analytical Choices
 Several analytical decisions were informed by both data limitations and the scope of the project:
 * **Florida’s Missing 2021 Data:** As detailed above, this affects both regular and YoY averages and was factored into interpretation when comparing trends across states.
 * **Pivot Table Usage:** Pivot tables were used to validate manual calculations and supported internal QA. They reinforced understanding of multiple calculation approaches (formula-based vs. aggregation) and strengthened confidence in final values used for visualization.
