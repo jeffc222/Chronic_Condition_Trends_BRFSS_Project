@@ -15,7 +15,7 @@ This file outlines the full workflow behind the BRFSS chronic condition analysis
 * **Data_Value_Type:** Crude Prevalence
 * **Break_Out:** Overall population
 * **Years:** 2012–2022
-* **States:** TX, CA, FL, NY, PA
+* **States:** CA, TX, FL, NY, PA
 * **Indicators:** Obesity, Diabetes, Smoking, Depression
     * ***Topics/Responses:***
         * BMI Categories → Obese
