@@ -5,12 +5,14 @@ This project analyzes 10 years of trends in four major chronic health conditions
 
 The goal is to uncover long-term shifts in health outcomes, compare state-level patterns against the five-state average, and pinpoint areas where public health efforts may be most needed. The analysis is designed to help health agencies and decision-makers respond to emerging trends. 
 
+
 ## Objectives
 * Track how **obesity, diabetes, smoking, and depression** changed from 2012 to 2022
 * Compare chronic health trends across five of the most populous U.S. states
 * Identify states that consistently perform above or below the five-state average
 * Highlight shifts that may require targeted public health action
 * Visualize state-level trends through an interactive dashboard designed for public health insights
+
 
 ## Dataset Structure
 The dataset originates from the **[CDC BRFSS (Behavioral Risk Factor Surveillance System)](data/data_link.md)** and was processed using Google BigQuery. The raw data was filtered and reshaped to create a clean state-year structure suitable for trend analysis and visualization. 
@@ -42,7 +44,6 @@ Common Table Expressions (CTEs) were used to organize intermediate transformatio
 
 [View SQL queries](work/sql_queries.sql)
 
-
 ### Data Processing (Google Sheets)
 The exported dataset was processed in Google Sheets to finalize calculations and prepare the visualization. Key steps included:
 * Applied conditional formatting to flag increases and decreases
@@ -53,13 +54,13 @@ The exported dataset was processed in Google Sheets to finalize calculations and
 
 [View spreadsheet and notes](work/spreadsheet)
 
-
 ### Dashboard Development (Tableau)
 An interactive dashboard was built in Tableau to help stakeholders explore state-level trends. The dashboard includes:
 * Built interactive line charts showing condition-specific changes over time
 * Added a dashed reference line to benchmark each trend against the **five-state average**
 * Enabled unified filtering by state across all charts for seamless comparison
 * Displayed clean tooltips showing the year, state, and prevalence values
+
 
 ## Visualizations
 The Tableau dashboard illustrates decade-long trends in chronic conditions across the five most populous U.S. states. Each condition is displayed in a side-by-side line chart, with a unified dropdown filter that updates all charts simultaneously. A dashed reference line shows the five-state average as a benchmark.
@@ -80,72 +81,35 @@ A static preview of the full dashboard is available below.
 * **Diabetes** rates rose most in **Texas and California**, while **Florida** experienced the smallest increase.
 * **Smoking** declined in every state. **Texas and New York** had the steepest reductions, while **Florida** showed the least improvement.
 * **Depression** increased in all states except **Florida**, with the sharpest rises in **California and Texas.**
-* **Texas** ranked in the **top two across all indicators** based on total change over the decade, reflecting consistent large shifts in health trends. 
+* **Texas** ranked in the **top two across all indicators** based on total change over the decade, reflecting consistent large shifts in health trends.
 
 
 ## Recommendations 
-* Targeted Health Campaigns: Focus on obesity and diabetes prevention in Texas and Pennsylvania, where rates continue to climb.
-* Expand Mental Health Access: Prioritize depression-related services in New York and Florida, especially post-2020.
-* Reinforce Anti-Smoking Programs: Continue investment in states like California and New York to maintain downward momentum in smoking.
-* Integrate Data Monitoring: Use BRFSS updates annually to guide real-time public health decisions at the state level.
-
-
-
-Recommendations
-Address Obesity and Diabetes Growth: Focus prevention and intervention efforts in Texas and Pennsylvania where metabolic conditions are rising the fastest.
-
-Support Mental Health Expansion: Prioritize behavioral health funding in Florida and New York in response to increasing depression trends.
-
-Sustain Anti-Smoking Success: Reinforce effective public health strategies in California and New York to maintain progress.
-
-Integrate Data Monitoring: Use ongoing BRFSS releases to track future shifts and adapt public health programs based on real-time trends.
+* **Address Obesity and Diabetes Trends:** Prioritize prevention and management programs in **Texas, New York, and California,** where obesity and diabetes showed the most significant increases.
+* **Expand Mental Health Services:** Allocate behavioral health resources in **California and Texas,** which saw the sharpest rises in depression, and monitor Florida for future changes.
+* **Reinforce Smoking Reduction Efforts:** Continue supporting anti-smoking initiatives in **Texas and New York,** where the steepest declines occurred, while increasing attention in Florida due to limited progress.
+* **Leverage Ongoing Data Monitoring:** Use annual BRFSS releases to track shifts in health indicators and adjust state-level strategies based on updated trends.
 
 
 ## Action Plan
-* Policy Advocacy: Use decade-long trends to inform state health departments and legislators
-* Public Education: Highlight state-specific trends in community health campaigns
-* Ongoing Monitoring: Refresh analysis yearly as new BRFSS data is released
+* **Share Insights with Stakeholders:** Present dashboard findings to state health departments, policy teams, and advocacy groups for awareness and alignment.
+* **Tailor Interventions by Region:** Deploy condition-specific campaigns that reflect each state’s trend profile and target high-need areas.
+* **Maintain and Update Tools:** Refresh visualizations annually with new BRFSS data to support long-term planning and evaluate intervention impact.
 
-
-Action Plan
-Report Findings: Share visual dashboards with state health departments and policy partners
-
-Target Interventions: Deploy regional campaigns tailored to condition-specific burdens
-
-Refine Over Time: Update dashboards and trend models as new BRFSS data becomes available
 
 ## Repository Contents
 * README.md – Project overview, technical steps, insights, and recommendations
-* data/ – Dataset metadata and external dataset link
-  * dataset_link.md – Link to CDC BRFSS SMART dataset via BigQuery
-* work/ – Project work files: SQL queries, spreadsheet files
-  * sql_queries.sql – BigQuery SQL code used for data filtering and cleaning
-  * data_notes.md – Detailed justification of filtering, logic, and data processing choices
+* data/ – Dataset summary and data source
+  * dataset_link.md – Link to CDC BRFSS SMART dataset
+* work/ – Project work, including:
+  * sql_queries.sql – SQL logic for data filtering and transformation
+  * data_notes.md – Detailed justification of technical process and rationale
   * sheets/ - Spreadsheet and spreadsheet documentation
     * brfss.xlsx – Final spreadsheet with trends and YoY calculations
+    * spreadsheet_documentation.md - Explanation of every tab in the spreadsheet
 * images/ – Visual outputs and static chart images
-  * obesity_trend.png
-  * smoking_trend.png
-  * dashboard_preview.png
-
-Repository Contents
-README.md – Project overview, methodology, insights, and recommendations
-
-data/ – Dataset summary and external data source reference
-
-dataset_link.md – Direct link to the CDC BRFSS dataset via BigQuery
-
-work/ – Project artifacts, including:
-
-sql_queries.sql – SQL logic for filtering and transformation
-
-BRFSS_trends.xlsx – Cleaned data with all calculations and checks
-
-data_notes.md – Full documentation of technical process and rationale
-
-images/ – Visualization outputs and condition-specific snapshots
-
-obesity_trend.png, smoking_trend.png, dashboard_preview.png, etc.
+  * brfsstable.png
+  * brfssgeneral.png
 
 
 ## Disclaimer
