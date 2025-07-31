@@ -39,7 +39,7 @@ This file outlines the full workflow behind the BRFSS chronic condition analysis
 *Rationale:*
 This modular, multi-CTE SQL approach was chosen for clarity, performance, and reusability. Filtering early reduces data volume, improving efficiency. Pivoting the indicators into columns using **MAX(CASE WHEN...)** makes the dataset easier to analyze and visualize downstream. Calculating YoY changes through a self-join enables longitudinal comparisons while preserving the row-level structure. Sorting the final output by state and year ensures intuitive chronological readability for both manual review and spreadsheet-based analysis.
 
-[View SQL queries]sql_queries.sql).
+[View SQL queries](sql_queries.sql).
 
 --- 
 
