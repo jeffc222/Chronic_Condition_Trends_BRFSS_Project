@@ -52,7 +52,7 @@ The exported dataset was processed in Google Sheets to finalize calculations and
 * Created **pivot tables** for trend summaries and internal validation
 * Handled Florida's missing 2021 data by adjusting averaging logic
 
-[View spreadsheet and notes](work/spreadsheet)
+[View spreadsheet and notes](work/sheet)
 
 ### Dashboard Development (Tableau)
 An interactive dashboard was built in Tableau to help stakeholders explore state-level trends. The dashboard includes:
