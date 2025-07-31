@@ -46,10 +46,10 @@ Public BRFSS data was queried directly from Google Cloud's BigQuery platform. Th
 
 ### Data Processing (Google Sheets)
 The exported dataset was processed in Google Sheets to finalize calculations and prepare the visualization. Key steps included:
-* Applied conditional formatting to flag increases and decreases
-* Calculated YoY percent changes by state and condition
+* Applied **conditional formatting** to flag increases and decreases
+* Calculated **YoY percent** changes by state and condition
 * Organized separate tabs for each condition to simplify analysis
-* Created pivot tables for trend summaries and internal validation
+* Created **pivot tables** for trend summaries and internal validation
 * Handled Florida's missing 2021 data by adjusting averaging logic
 
 [View spreadsheet and notes](work/spreadsheet)
