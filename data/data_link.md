@@ -1,6 +1,6 @@
 ### Disclaimer
 2011 to present (Aug 2025, data last update Feb 2025). BRFSS combined land line and cell phone prevalence data. BRFSS is a continuous, state-based surveillance system that collects information about modifiable risk factors for chronic diseases and other leading causes of death. Data will be updated annually as it becomes available. Detailed information on sampling methodology and quality assurance can be found on the [BRFSS website](http://www.cdc.gov/brfss). 
-* [Survey Methodology](http://www.cdc.gov/brfss/factsheets/pdf/DBS_BRFSS_survey.pdf) 
+* [Annual Data and Methodology](https://www.cdc.gov/brfss/annual_data/annual_data.htm)
 * [Glossary](https://data.cdc.gov/Behavioral-Risk-Factors/Behavioral-Risk-Factor-Surveillance-System-BRFSS-H/iuq5-y9ct)
 
 **Dataset**: Behavioral Risk Factor Surveillance System (BRFSS) Prevalence Data (2011 to present)
