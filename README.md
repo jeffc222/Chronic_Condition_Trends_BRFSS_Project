@@ -26,7 +26,7 @@ The final dataset includes:
 
 The original BRFSS data was structured in **long format**, with each row representing a unique combination of year, state, condition, and prevalence value. Using SQL, the data was pivoted into **wide format**, one row per state-year with separate columns for each health indicator. A **self-join** was applied to calculate **prior-year values** and **year-over-year (YoY) percentage changes**, supporting multi-year comparisons across all five states. 
 
-For detailed filtering logic and SQL transformation steps, see [notes](work/data_notes.md).
+For complete methodology and analytical rationale, see [notes](work/data_notes.md).
 
 ![table](images/brfsstable.png)
 
