@@ -13,7 +13,7 @@ This tab presents 10-year average prevalence values (2012–2022) for four chron
 
 Each subsequent row shows a state’s individual 10-year average for each condition. The final column flags whether the state’s average is above or below the overall benchmark, helping identify how each state compares to the group average.
 
-![summary](../../images/brfsssum.png)
+![summary](../../images/brfsssumx.png)
 
 ## Obesity Tab
 This tab isolates annual **obesity** prevalence data from 2012 to 2022 for five selected U.S. states **(CA, TX, FL, NY, PA)**. It displays year-by-year crude prevalence rates along with calculated year-over-year (YoY) percentage changes for each state. These values support trend analysis and were used to build the Tableau visualizations.
