@@ -73,7 +73,7 @@ Explore trends by selecting a state using the filter at the top of the dashboard
 **Static Preview**
 A static preview of the full dashboard is available below.
 
-![brfsschart](images/brfssgeneral.png)
+![brfsschart](images/brfssgraph.png)
 
 
 ## Major Insights
