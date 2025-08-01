@@ -86,7 +86,7 @@ A static preview of the full dashboard is available below.
 ## Recommendations 
 * **Strengthen Prevention in High-Change States:** Focus **obesity and diabetes** prevention campaigns in **Texas, California, and New York,** where aboslute changes were the highest.
 * **Expand Behavioral Health Resources:** Prioritize mental health funding in **California and Texas,** given the notable rise in depression.
-* **Reinforce Anti-Smoking Effects in California:** Despite national progress, California lagged in smoking reduction and may benefit from renewed prevention efforts. 
+* **Reinforce Anti-Smoking Effects in California:** Despite national progress, **California** lagged in smoking reduction and may benefit from renewed prevention efforts. 
 * **Leverage Annual BRFSS Data:** Integrate yearly BRFSS updates into local dashboards to monitor shifts and target interventions in real time.
 
 ## Action Plan
@@ -105,8 +105,13 @@ A static preview of the full dashboard is available below.
     * brfssx.xlsx – Final spreadsheet with trends and YoY calculations
     * spreadsheet_documentation.md - Explanation of every tab in the spreadsheet
 * images/ – Visual outputs and static chart images
+  * brfssgraph.png
+  * brfssob.png
+  * brfssog.png
+  * brfssopt.png
+  * brfssoypt.png
   * brfsstable.png
-  * brfssgeneral.png
+  * brfssum.png
 
 
 ## Disclaimer
