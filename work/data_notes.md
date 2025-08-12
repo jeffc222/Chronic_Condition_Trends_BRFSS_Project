@@ -48,7 +48,7 @@ This modular, multi-CTE SQL approach was chosen for clarity, performance, and re
 
 **Key Tabs & Structure:**
 * **Original:** Contains the full cleaned export from BigQuery, including yearly prevalence rates for each condition (obesity, diabetes, smoking, depression) from 2012–2022 across five selected states. Also includes calculated prior-year values and year-over-year (YoY) percent changes to support longitudinal trend analysis.
-* **Summary:** Displays each state's 10-year average prevalence for all four conditions alongside the combined five-state average ("National") as a benchmark. Includes a visual above/below indicator for quick comparison and a ranking table based on abosulte change from 2012 to 2022, highlighting relative performance across states. 
+* **Summary:** Displays each state's 10-year average prevalence for all four conditions alongside the combined five-state average ("National") as a benchmark. Includes a visual above/below indicator for quick comparison and a ranking table based on absolute change from 2012 to 2022, highlighting relative performance across states. 
 * **Obesity / Diabetes / Smoking / Depression:** These four tabs isolate each individual condition for deeper inspection. Each tab includes:
   * Annual values and Year-over-Year percent change values by state from 2012–2022
   * State-specific 10-year averages
