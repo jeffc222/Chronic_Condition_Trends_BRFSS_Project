@@ -103,7 +103,7 @@ The finalized Tableau dashboard can be viewed [here](https://public.tableau.com/
 ---
 
 ## 📌 Florida Data Caveat (Missing 2021)
-Florida did not meet the CDC’s data collection requirements for BRFSS in 2021 and was therefore excluded from the official 2021 annual dataset. According to the CDC: "Florida was unable to collect BRFSS data over enough months to meet the minimum requirements for inclusion in the 2021 annual aggregate data set." — [CDC BRFSS 2021 Comparison Report PDF](https://www.cdc.gov/brfss/annual_data/2021/pdf/compare_2021-508.pdf) No additional states or indicators had missing years or reporting gaps in the filtered BRFSS dataset for 2012-2022. Florida was the only exception explicitly omitted by CDC.
+Florida did not meet the CDC’s data collection requirements for BRFSS in 2021 and was therefore excluded from the official 2021 annual dataset. According to the CDC: "Florida was unable to collect BRFSS data over enough months to meet the minimum requirements for inclusion in the 2021 annual aggregate data set." — [CDC BRFSS 2021 Comparison Report PDF](https://www.cdc.gov/brfss/annual_data/2021/pdf/compare_2021-508.pdf). No additional states or indicators had missing years or reporting gaps in the filtered BRFSS dataset for 2012-2022. Florida was the only exception explicitly omitted by CDC.
 
 **Impact on Analysis:**
 * **Standard Averages:** Florida’s indicator averages (e.g., obesity, smoking) were calculated over 10 years (excluding 2021), instead of 11.
