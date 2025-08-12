@@ -10,7 +10,7 @@ For each condition, this dataset also includes the **prior year’s value** and 
 
 ## Summary Tab
 This tab presents a high-level overview of average prevalence rates (2012-2022) for each condition across all five states, alongside national benchmarks for comparison. Conditional formatting highlights whether each state's average is **above or below** the national average, making disparities in chronic and behavioral health burdens quickly visible.
-In addition to averages, the tab calculates **aboslulte point changes** (2022 value minus 2012 value) for each indicator by state. These differences are then **ranked from highest to lowest change,** with **smoking** rankings reversed to reflect that a larger decline is more favorable. An average ranking was computed across all four indicator to assess each state's overall trajectory. For instance, **Texas and California tied for the most significant overall shifts,** each an average ranking of **2.25**.
+In addition to averages, the tab calculates **absolute point changes** (2022 value minus 2012 value) for each indicator by state. These differences are then **ranked from highest to lowest change,** with **smoking** rankings reversed to reflect that a larger decline is more favorable. An average ranking was computed across all four indicator to assess each state's overall trajectory. For instance, **Texas and California tied for the most significant overall shifts,** each an average ranking of **2.25**.
 This tab synthesizes raw trends and performance-based rankings to help inform which states experienced the greatest health shifts over the decade, serving as a foundation for subsequent insights and recommendations. 
 
 ![summary](../../images/brfssum.png)
