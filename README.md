@@ -73,7 +73,7 @@ Explore trends by selecting a state using the filter at the top of the dashboard
 **Static Preview**
 A static preview of the full dashboard is available below.
 
-![brfsschart](images/brfssgraph.png)
+![graphbrfss](images/graphbrfss.png)
 
 
 ## Major Insights
@@ -105,7 +105,7 @@ A static preview of the full dashboard is available below.
     * brfssx.xlsx – Final spreadsheet with trends and YoY calculations
     * spreadsheet_documentation.md - Explanation of every tab in the spreadsheet
 * images/ – Visual outputs and static chart images
-  * brfssgraph.png
+  * graphbrfss.png
   * brfssob.png
   * brfssog.png
   * brfssopt.png
