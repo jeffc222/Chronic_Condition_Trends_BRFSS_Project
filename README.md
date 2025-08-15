@@ -77,6 +77,7 @@ A static preview of the full dashboard is available below.
 
 
 ## Major Insights
+* 
 * **New York** saw the largest increase in **obesity** (+6.5 points), followed closely by **Florida and Texas** (+6.4 points each), indicating mounting lifestyle-related health challenges in these states.
 * **Diabetes** rose most sharply in **Texas**, while **Florida** experience the smallest increase.
 * **Smoking** decline across all states, with **Pennsylvania** showing the greatest drop (-6.5 points), followed by **Texas and Florida** (-6.4 percentage points).
