@@ -74,7 +74,7 @@ Organizing the dataset in Google Sheets provided a structured and interactive en
 
 This step also enabled early identification of data gaps and anomalies, such as Florida’s missing 2021 values, which were flagged and considered in interpretation. Leveraging spreadsheets for pre-visualization processing reflects common workflows in analytics teams and enhances auditability, transparency, and collaboration throughout the project.
 
-For a full breakdown of each tab—including descriptions, formulas used, and conditional formatting logic—see the dedicated documentation [here](sheets/spreadsheet_documentation.md).
+For a full breakdown of each tab, including descriptions, formulas used, and conditional formatting logic, see the dedicated documentation [here](sheets/spreadsheet_documentation.md).
 
 --- 
 
