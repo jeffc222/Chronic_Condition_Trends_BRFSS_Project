@@ -77,14 +77,16 @@ A static preview of the full dashboard is available below.
 
 
 ## Major Insights
-* 
-* **New York** saw the largest increase in **obesity** (+6.5 points), followed closely by **Florida and Texas** (+6.4 points each), indicating mounting lifestyle-related health challenges in these states.
+* **Obesity**, **diabetes**, and **depression** all had an overall increase, however only **smoking** had an overall decline.
+* Significant dip for **depression** in 2016, specifically for Texas, Florida, and New York. 
+* **New York** saw the largest increase in **obesity** (+6.5 points), followed closely by **Florida and Texas** (+6.4 points each).
 * **Diabetes** rose most sharply in **Texas**, while **Florida** experience the smallest increase.
 * **Smoking** decline across all states, with **Pennsylvania** showing the greatest drop (-6.5 points), followed by **Texas and Florida** (-6.4 percentage points).
 * **Depression** increased in all five states, with **Californias** leading and **Florida** having a modest increase.
 * **Texas and California** had the **lowest average ranking scores**, relfecting the **most consistently large shifts** in chronic condition indicators over the decade. 
 
 ## Recommendations 
+* **Investigate the 2016 Depression Dip:** Identify what drove the sharp decline and verify it's not caused by data errors or changes in how rates were calculated. 
 * **Strengthen Prevention in High-Change States:** Focus **obesity and diabetes** prevention campaigns in **Texas, California, and New York,** where aboslute changes were the highest.
 * **Expand Behavioral Health Resources:** Prioritize mental health funding in **California and Texas,** given the notable rise in depression.
 * **Reinforce Anti-Smoking Effects in California:** Despite national progress, **California** lagged in smoking reduction and may benefit from renewed prevention efforts. 
