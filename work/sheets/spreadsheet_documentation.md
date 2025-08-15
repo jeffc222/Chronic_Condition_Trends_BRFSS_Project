@@ -13,7 +13,7 @@ This tab presents a high-level overview of average prevalence rates (2012-2022) 
 In addition to averages, the tab calculates **absolute point changes** (2022 value minus 2012 value) for each indicator by state. These differences are then **ranked from highest to lowest change,** with **smoking** rankings reversed to reflect that a larger decline is more favorable. An average ranking was computed across all four indicator to assess each state's overall trajectory. For instance, **Texas and California tied for the most significant overall shifts,** each an average ranking of **2.25**.
 This tab synthesizes raw trends and performance-based rankings to help inform which states experienced the greatest health shifts over the decade, serving as a foundation for subsequent insights and recommendations. 
 
-![summary](../../images/brfssum.png)
+![summary](../../images/brfsssum.png)
 
 ## Obesity Tab
 This tab isolates annual **obesity** prevalence data from 2012 to 2022 for five selected U.S. states **(CA, TX, FL, NY, PA)**. It displays year-by-year crude prevalence rates along with calculated year-over-year (YoY) percentage changes for each state. These values support trend analysis and were used to build the Tableau visualizations.
