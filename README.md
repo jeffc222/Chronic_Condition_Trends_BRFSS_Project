@@ -106,7 +106,7 @@ A static preview of the full dashboard is available below.
   * sql_queries.sql – SQL logic for data filtering and transformation
   * data_notes.md – Detailed justification of technical process and rationale
   * sheets/ - Spreadsheet and spreadsheet documentation
-    * brfssx.xlsx – Final spreadsheet with trends and YoY calculations
+    * brfss.xlsx – Final spreadsheet with trends and YoY calculations
     * spreadsheet_documentation.md - Explanation of every tab in the spreadsheet
 * images/ – Visual outputs and static chart images
   * brfsstgraph.png
