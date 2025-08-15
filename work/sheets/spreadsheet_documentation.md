@@ -1,5 +1,5 @@
 # Spreadsheet Documentation
-This document provides a structured overview of each tab within the **brfssx.xlsx spreadsheet.** Each tab is explained with its purpose, contents, and relevance to the overall analysis process. Together, these annotations offer transparency into the data preparation, organization, and logic behind the visual and analytical outputs presented in this project.
+This document provides a structured overview of each tab within the **[brfss.xlsx spreadsheet](sheets/brfss.xlsx).** Each tab is explained with its purpose, contents, and relevance to the overall analysis process. Together, these annotations offer transparency into the data preparation, organization, and logic behind the visual and analytical outputs presented in this project.
 
 ## Original Tab
 This tab contains the full cleaned dataset exported from BigQuery and serves as the foundation for all downstream analysis. It includes annual prevalence values for four chronic health indicators—**obesity, diabetes, smoking,** and **depression**—across five selected U.S. states **(California, Texas, Florida, New York, and Pennsylvania)** from 2012 to 2022.
