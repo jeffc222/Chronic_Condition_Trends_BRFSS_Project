@@ -48,17 +48,17 @@ This modular, multi-CTE SQL approach was chosen for clarity, performance, and re
 
 **Key Tabs & Structure:**
 * **Original:** Contains the full cleaned export from BigQuery, including yearly prevalence rates for each condition (obesity, diabetes, smoking, depression) from 2012–2022 across five selected states. Also includes calculated prior-year values and year-over-year (YoY) percent changes to support longitudinal trend analysis.
-* **Summary:** Displays each state's 10-year average prevalence for all four conditions alongside the combined five-state average ("National") as a benchmark. Includes a visual above/below indicator for quick comparison and a ranking table based on absolute change from 2012 to 2022, highlighting relative performance across states. 
+* **Summary:** Displays each state's 10-year average prevalence for all four conditions alongside the combined five-state average as a benchmark. Includes a visual above/below indicator for quick comparison and a ranking table based on absolute change from 2012 to 2022, highlighting relative performance across states. 
 * **Obesity / Diabetes / Smoking / Depression:** These four tabs isolate each individual condition for deeper inspection. Each tab includes:
   * Annual values and Year-over-Year percent change values by state from 2012–2022
   * State-specific 10-year averages
-  * National benchmark for the same period
+  * Five-state average benchmark for the same period
   * Conditional formatting to highlight states above/below the benchmark using:
-    * =D2>$D$13 → Above national average
-    * =D2<=$D$13 → Below national average
+    * =D2>$D$13 → Above five-state average
+    * =D2<=$D$13 → Below five-state average
   * These formatting rules made trends immediately visible for visual review.
 * **OPT, DIPT, SPT, DEPT (e.g. Obesity Pivot Tables):** Pivot tables were used to cross-validate the average calculations. Grand Totals in each pivot matched the AVERAGEIFS results from earlier tabs, reinforcing confidence in data quality and spreadsheet fluency. Example:
-  * National Average: =AVERAGEIFS(D2:D, D2:D, "<>")
+  * Five-State Average: =AVERAGEIFS(D2:D, D2:D, "<>")
   * State Average (e.g. CA): =AVERAGEIFS(D2:D, B2:B, "CA", D2:D, "<>")
 
   The inclusion of both formula-based and pivot table-based calculations demonstrates a well-rounded understanding of when to apply each method. Formulas are used for quick and flexible checks, while pivot tables are used for structured aggregation, filtering, and presentation.
@@ -94,7 +94,7 @@ This simplification ensured a cleaner Tableau interface, free from metric redund
 
 * **Visualization Strategy:** The streamlined dataset was imported into Tableau, where the focus was placed on producing clear, comparative visuals across the four health conditions. Line charts were used to display each condition’s trend over time by state. A  filter was added to allow users to toggle between states for each condition-specific chart.
 
-A constant dashed line was also added to represent the 10-year national average for each indicator, serving as a benchmark for comparison. Custom labels and tooltips were included to support quick interpretation and provide context to non-technical viewers.
+A constant dashed line was also added to represent the 10-year five-state average for each indicator, serving as a benchmark for comparison. Custom labels and tooltips were included to support quick interpretation and provide context to non-technical viewers.
 
 * **Rationale:** Simplifying the dataset allowed for a more focused and intuitive visualization experience. By prioritizing absolute prevalence values over derived metrics, the visualizations remained accessible to a broader audience while still supporting meaningful trend comparisons. This approach mirrors common dashboard development practices, where clarity, usability, and stakeholder relevance are key.
 
