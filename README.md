@@ -105,9 +105,9 @@ The Tableau dashboard illustrates decade-long trends in chronic conditions acros
 ## Major Insights
 * **Obesity**, **diabetes**, and **depression** all had an overall increase, however only **smoking** had an overall decline.
 * Significant dip for **depression** in 2016, specifically for Texas, Florida, and New York. 
-* **New York** saw the largest increase in **obesity** (+6.5 points), followed closely by **Florida and Texas**. 
+* **New York** saw the largest increase in **obesity** (+6.5 points), followed closely by **Florida and Texas** (+6.4 and +6.3 points respectively).
 * **Diabetes** rose most sharply in **Texas**, while **Florida** experienced the smallest increase.
-* **Smoking** decline across all states, with **Pennsylvania** showing the greatest drop (-6.5 points), followed by **Texas and Florida** (-6.4 points).
+* **Smoking** decline across all states, with **Pennsylvania** showing the greatest drop (-6.5 points), followed closely by **Texas and Florida** (-6.4 points).
 * **Depression** increased in all five states, with **California** leading and **Florida** having a modest increase.
 * **Texas and California** had the **lowest average ranking scores**, relfecting the **most consistently large shifts** in chronic condition indicators over the decade. 
 
