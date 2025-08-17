@@ -77,7 +77,6 @@ For visualization of bar chart and dashboard, see [Visualizations](#Visualizatio
 ### Data Quality Assurance (QA) checks
 * **Ranges:** All prevalence values within 0 to 100 and stored as plain numbers
 * **Uniqueness:** Exactly one row per state per year after the pivot
-* **Joins:** Prior year join yields null YoY on each state’s first year only
 * **Codes:** State abbreviations validated and nulls removed
 * **Benchmarks:** Pivot table grand totals match AVERAGEIFS checks for five-state benchmark
 * **Florida 2021:** Consistently verified exclusion in SQL, Sheets, and Tableau
