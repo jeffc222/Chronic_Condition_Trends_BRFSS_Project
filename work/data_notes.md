@@ -6,6 +6,13 @@ The analysis combines **SQL, Google Sheets,** and **Tableau** to clean, process,
 ## Summary
 This file outlines the full workflow behind the BRFSS chronic condition analysis project, documenting how raw survey data was transformed into clean, visual-ready insights. It covers SQL extraction and transformation, spreadsheet-based calculations and validation, and Tableau dashboard preparation. Each step reflects best practices in analytical documentation and mirrors common workflows in real-world healthcare analytics roles.
 
+**Units and metrics**
+* Prevalence is a percentage of adults 18 or older, stored as a plain number. For example 5 means 5 percent.
+* Percentage points mean a direct difference between two percentages. Example 18 percent to 15 percent is a change of 3 percentage points.
+* Percent change equals (new minus old) divided by old times 100. This was used for Year-over-Year percent changes and was used only for QA, not shown in visuals.
+* Bars show the absolute point change from 2012 to 2022 using the magnitude only.
+* Five state benchmarks are simple unweighted means. Florida averages exclude 2021.
+
 --- 
 
 # Step 1: Data Extraction (SQL via BigQuery)
@@ -48,7 +55,7 @@ This modular, multi-CTE SQL approach was chosen for clarity, performance, and re
 
 **Key Tabs & Structure:**
 * **Original:** Contains the full cleaned export from BigQuery, including yearly prevalence rates for each condition (obesity, diabetes, smoking, depression) from 2012–2022 across five selected states. Also includes calculated prior-year values and year-over-year (YoY) percent changes to support longitudinal trend analysis.
-* **Summary:** Displays each state's 10-year average prevalence for all four conditions alongside the combined five-state average as a benchmark. Includes a visual above/below indicator for quick comparison and a ranking table based on absolute change from 2012 to 2022, highlighting relative performance across states. 
+* **Summary:** Displays each state's 10-year average prevalence for all four conditions alongside the combined five-state average as a benchmark. Includes a visual above/below indicator for quick comparison and a ranking table based on absolute change from 2012 to 2022, highlighting relative performance across states. Created a bar chart from the absolute change between 2022 and 2012 to have a clear visualization.
 * **Obesity / Diabetes / Smoking / Depression:** These four tabs isolate each individual condition for deeper inspection. Each tab includes:
   * Annual values and Year-over-Year percent change values by state from 2012–2022
   * State-specific 10-year averages
@@ -62,6 +69,7 @@ This modular, multi-CTE SQL approach was chosen for clarity, performance, and re
   * State Average (e.g. CA): =AVERAGEIFS(D2:D, B2:B, "CA", D2:D, "<>")
 
   The inclusion of both formula-based and pivot table-based calculations demonstrates a well-rounded understanding of when to apply each method. Formulas are used for quick and flexible checks, while pivot tables are used for structured aggregation, filtering, and presentation.
+  
 * **OYPT, DIYPT, SYPT, DEYPT (e.g. Obesity YoY Pivot Tables):** Year-over-year percent change values were organized into pivot tables by state and year. Though not included in the final visualizations, they revealed trends such as:
   * Mild decline in Florida's depression rate, which contrasted with rising trends elsewhere
   * Smoking showed consistent YoY declines across all states.
