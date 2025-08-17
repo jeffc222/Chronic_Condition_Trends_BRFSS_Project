@@ -132,7 +132,7 @@ The Tableau dashboard illustrates decade-long trends in chronic conditions acros
 * Open and download dataset [link](data/data_link.md). Save the file(s) where your SQL environment can read them, highly recommend BigQuery.
 
 2. **Run the SQL**: 
-Open and run the [queries](work/sql_queries.sql) in BigQuery.
+ Open and run the [queries](work/sql_queries.sql) in BigQuery.
 * Filters:
   * **Years:** 2012–2022
   * **States:** CA, TX, FL, NY, PA
@@ -144,11 +144,11 @@ Open and run the [queries](work/sql_queries.sql) in BigQuery.
 * Save the result as a new table (e.g., your_project.your_ds.brfss_state_year)
 
 3. **Export to the workbook**
-Open [spreadsheet](work/sheets/brfssx.xlsx).
+ Open [spreadsheet](work/sheets/brfssx.xlsx).
 
-Paste the BigQuery result into the **Original** tab. Keep these columns from SQL: **Year, LocationAbbr, LocationDesc, Obesity, Diabetes, Smoking, Depression**, plus the prior year columns and **YoY %** columns you computed in SQL for QA. Do not recalculate YoY in Sheets. 
+ Paste the BigQuery result into the **Original** tab. Keep these columns from SQL: **Year, LocationAbbr, LocationDesc, Obesity, Diabetes, Smoking, Depression**, plus the prior year columns and **YoY %** columns you computed in SQL for QA. Do not recalculate YoY in Sheets. 
 
-Create or verify the tabs exist and point formulas to **Original**:
+ Create or verify the tabs exist and point formulas to **Original**:
 * **Obesity, Diabetes, Smoking, Depression** tabs: Reference annual prevalence by state, and compute each state’s 10-year average with AVERAGEIFS
   * Example: Overall five-state average → =AVERAGEIFS(D2:D, D2:D, "<>")
   * Example: State average (CA) → =AVERAGEIFS(D2:D, B2:B, "CA", D2:D, "<>")
