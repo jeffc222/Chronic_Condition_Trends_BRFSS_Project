@@ -12,7 +12,7 @@ The goal is to uncover long-term shifts in health outcomes, compare state-level 
 * Compare chronic health trends across five of the most populous U.S. states
 * Identify states that consistently perform above or below the five-state average
 * Highlight shifts that may require targeted public health action
-* Display the absolute change from 2012 to 2022 for each state and condition in a bar chart to compare the magnitude of shifts at a glance
+* Display the absolute change from 2012 to 2022 for each state and condition in a bar chart to compare the magnitude of shifts
 * Visualize state-level trends through an interactive dashboard designed for public health insights
 
 
