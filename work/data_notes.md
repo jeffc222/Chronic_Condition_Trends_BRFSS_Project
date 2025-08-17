@@ -110,7 +110,7 @@ For a full breakdown of each tab, including descriptions, formulas used, and con
 
 This simplification ensured a cleaner Tableau interface, free from metric redundancy, and optimized for time-series visualization.
 
-* **Visualization Strategy:** The streamlined dataset was imported into Tableau, where the focus was placed on producing clear, comparative visuals across the four health conditions. Line charts were used to display each condition’s trend over time by state. A  filter was added to allow users to toggle between states for each condition-specific chart.
+* **Visualization Strategy:** The streamlined dataset was imported into Tableau, where the focus was placed on producing clear, comparative visuals across the four health conditions. Line charts were used to display each condition’s trend over time by state. A filter was added to allow users to toggle between states for each condition-specific chart.
 
 A constant dashed line was also added to represent the 10-year five-state average for each indicator, serving as a benchmark for comparison. Custom labels and tooltips were included to support quick interpretation and provide context to non-technical viewers.
 
