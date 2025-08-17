@@ -144,7 +144,11 @@ Open and run the [queries](work/sql_queries.sql) in BigQuery.
 * Save the result as a new table (e.g., your_project.your_ds.brfss_state_year)
 
 3. **Export to the workbook**
-Open [spreadsheet](work/sheets/brfssx.xlsx). Paste the BigQuery result into the **Original** tab. Keep these columns from SQL: **Year, LocationAbbr, LocationDesc, Obesity, Diabetes, Smoking, Depression**, plus the prior year columns and **YoY %** columns you computed in SQL for QA. Do not recalculate YoY in Sheets. Create or verify the tabs exist and point formulas to **Original**:
+Open [spreadsheet](work/sheets/brfssx.xlsx).
+
+Paste the BigQuery result into the **Original** tab. Keep these columns from SQL: **Year, LocationAbbr, LocationDesc, Obesity, Diabetes, Smoking, Depression**, plus the prior year columns and **YoY %** columns you computed in SQL for QA. Do not recalculate YoY in Sheets. 
+
+Create or verify the tabs exist and point formulas to **Original**:
 * **Obesity, Diabetes, Smoking, Depression** tabs: Reference annual prevalence by state, and compute each state’s 10-year average with AVERAGEIFS
   * Example: Overall five-state average → =AVERAGEIFS(D2:D, D2:D, "<>")
   * Example: State average (CA) → =AVERAGEIFS(D2:D, B2:B, "CA", D2:D, "<>")
