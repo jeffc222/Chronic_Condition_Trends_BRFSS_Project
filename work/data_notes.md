@@ -10,7 +10,7 @@ This file outlines the full workflow behind the BRFSS chronic condition analysis
 ### Units and Metrics
 * Prevalence is a percentage of adults 18 or older, stored as a plain number. For example 5 means 5 percent.
 * Percentage points mean a direct difference between two percentages. Example 18 percent to 15 percent is a change of 3 percentage points.
-* Percent change equals (new minus old) divided by old times 100. This was computed in SQL Step 3 after joining each state and year to its priro year.
+* Percent change equals (new minus old) divided by old times 100. This was computed in SQL Step 3 after joining each state and year to its prior year.
   * This was used for Year-over-Year percent changes and was used only for QA, not shown in visuals.
 * Bars show the absolute point change from 2012 to 2022 using the magnitude only.
 * Five state benchmarks in the Tableua dashboard are simple unweighted means. Florida averages exclude 2021.
