@@ -123,7 +123,8 @@ The Tableau dashboard illustrates decade-long trends in chronic conditions acros
 ## Action Plan
 * **Report Findings:** Share dashboards and key insights with state-level public health departments and policy leads.
 * **Target Interventions:** Deploy region-specific health campaigns based on each state's condition trends and ranking profile.
-* **Refine Over Time:** Refresh dashboards and re-run analysis annually as new BRFSS data becomes available. 
+* **Refine Over Time:** Refresh dashboards and re-run analysis annually as new BRFSS data becomes available.
+* **Policy crosswalk:** Align each trend inflection with state actions from 2012–2022 (cigarette taxes, Medicaid expansion, mental health funding, obesity programs). Note the likely drivers and gaps that suggest interventions.
 
 
 ## How to Reproduce
