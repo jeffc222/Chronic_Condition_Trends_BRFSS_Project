@@ -26,6 +26,7 @@ The final dataset includes:
 
 The original BRFSS data was structured in **long format**, with each row representing a unique combination of year, state, condition, and prevalence value. Using SQL, the data was pivoted into **wide format**, one row per state-year with separate columns for each health indicator. A **self-join** was applied to calculate **prior-year values** and **year-over-year (YoY) percentage changes**, supporting multi-year comparisons across all five states. 
 
+Units. All condition values are crude prevalence rates and represent the percent of adults age 18 or older. Values are stored as plain numbers. **For example 5 means 5 percent.**
 For complete methodology and analytical rationale, see [notes](work/data_notes.md).
 
 ![table](images/brfsstable.png)
@@ -51,6 +52,7 @@ The exported dataset was processed in Google Sheets to finalize calculations and
 * Organized separate tabs for each condition to simplify analysis
 * Created **pivot tables** for trend summaries and internal validation
 * Handled Florida's missing 2021 data by adjusting averaging logic
+* A bar chart was made to show the absolute value difference between 2022 and 2012
 
 [View spreadsheet and notes](work/sheets)
 
@@ -63,7 +65,9 @@ An interactive dashboard was built in Tableau to help stakeholders explore state
 
 
 ## Visualization
-The Tableau dashboard illustrates decade-long trends in chronic conditions across the five most populous U.S. states. Each condition is displayed in a side-by-side line chart, with a unified dropdown filter that updates all charts simultaneously. A dashed reference line shows the five-state average as a benchmark.
+The Tableau dashboard illustrates decade-long trends in chronic conditions across the five most populous U.S. states. Each condition is displayed in a side-by-side line chart, with a unified dropdown filter that updates all charts simultaneously. A dashed reference line shows the five-state average as a benchmark. 
+
+The bar chart displays absolute value difference between 2022 and 2012 made in Google Sheets. The bars show absolute change in percentage points from 2012 to 2022. Percentage points are a direct difference between two percentages. For example 18 percent to 15 percent is a change of 3 percentage points.
 
 **Interactive Dashboard**
 Explore trends by selecting a state using the filter at the top of the dashboard. Each line chart updates to reflect that state's trajectory over time. 
@@ -80,9 +84,9 @@ A static preview of the full dashboard is available below.
 ## Major Insights
 * **Obesity**, **diabetes**, and **depression** all had an overall increase, however only **smoking** had an overall decline.
 * Significant dip for **depression** in 2016, specifically for Texas, Florida, and New York. 
-* **New York** saw the largest increase in **obesity** (+6.5 points), followed closely by **Florida and Texas** (+6.4 points each).
+* **New York** saw the largest increase in **obesity** (+6.5% points), followed closely by **Florida and Texas** (+6.4% points each).
 * **Diabetes** rose most sharply in **Texas**, while **Florida** experience the smallest increase.
-* **Smoking** decline across all states, with **Pennsylvania** showing the greatest drop (-6.5 points), followed by **Texas and Florida** (-6.4 percentage points).
+* **Smoking** decline across all states, with **Pennsylvania** showing the greatest drop (-6.5% points), followed by **Texas and Florida** (-6.4% percentage points).
 * **Depression** increased in all five states, with **Californias** leading and **Florida** having a modest increase.
 * **Texas and California** had the **lowest average ranking scores**, relfecting the **most consistently large shifts** in chronic condition indicators over the decade. 
 
