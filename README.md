@@ -11,6 +11,7 @@ The goal is to uncover long-term shifts in health outcomes, compare state-level 
 * Compare chronic health trends across five of the most populous U.S. states
 * Identify states that consistently perform above or below the five-state average
 * Highlight shifts that may require targeted public health action
+* Display the absolute change from 2012 to 2022 for each state and condition in a bar chart to compare the magnitude of shifts at a glance
 * Visualize state-level trends through an interactive dashboard designed for public health insights
 
 
@@ -26,7 +27,13 @@ The final dataset includes:
 
 The original BRFSS data was structured in **long format**, with each row representing a unique combination of year, state, condition, and prevalence value. Using SQL, the data was pivoted into **wide format**, one row per state-year with separate columns for each health indicator. A **self-join** was applied to calculate **prior-year values** and **year-over-year (YoY) percentage changes**, supporting multi-year comparisons across all five states. 
 
-Units. All condition values are crude prevalence rates and represent the percent of adults age 18 or older. Values are stored as plain numbers. **For example 5 means 5 percent.**
+**Units and metrics** 
+
+* All condition values are crude prevalence rates and represent the percent of adults age 18 or older. Values are stored as plain numbers. **For example 5 means 5 percent.**
+* The bar chart made in Google Sheets displays absolute point difference between 2022 and 2012. The percentage points are a direct difference between two percentages. For example 18 percent to 15 percent is a change of 3 percentage points.
+* The Tableau dashboarrd line charts plot crude prevalence values by year.
+* Year over year percent change is calculated in SQL for QA only and does not appear in the visuals.
+
 For complete methodology and analytical rationale, see [notes](work/data_notes.md).
 
 ![table](images/brfsstable.png)
@@ -65,9 +72,7 @@ An interactive dashboard was built in Tableau to help stakeholders explore state
 
 
 ## Visualization
-The Tableau dashboard illustrates decade-long trends in chronic conditions across the five most populous U.S. states. Each condition is displayed in a side-by-side line chart, with a unified dropdown filter that updates all charts simultaneously. A dashed reference line shows the five-state average as a benchmark. 
-
-The bar chart displays absolute value difference between 2022 and 2012 made in Google Sheets. The bars show absolute change in percentage points from 2012 to 2022. Percentage points are a direct difference between two percentages. For example 18 percent to 15 percent is a change of 3 percentage points.
+The Tableau dashboard illustrates decade-long trends in chronic conditions across the five most populous U.S. states. Each condition is displayed in a side-by-side line chart, with a unified dropdown filter that updates all charts simultaneously. A dashed reference line shows the five-state average as a benchmark. The bar chart displays absolute point difference between 2022 and 2012 made in Google Sheets. 
 
 **Interactive Dashboard**
 Explore trends by selecting a state using the filter at the top of the dashboard. Each line chart updates to reflect that state's trajectory over time. 
@@ -78,6 +83,9 @@ Explore trends by selecting a state using the filter at the top of the dashboard
 A static preview of the full dashboard is available below.
 
 ![tgraph](images/brfsstgraph.png)
+
+**Bar Chart**
+A snapshot of the bar chart for the absolute value difference between 2022 and 2012 is shown below. 
 ![absgraph](images/brfssabsgraph.png)
 
 
@@ -90,6 +98,7 @@ A static preview of the full dashboard is available below.
 * **Depression** increased in all five states, with **Californias** leading and **Florida** having a modest increase.
 * **Texas and California** had the **lowest average ranking scores**, relfecting the **most consistently large shifts** in chronic condition indicators over the decade. 
 
+
 ## Recommendations 
 * **Investigate the 2016 Depression Dip:** Identify what drove the sharp decline and verify it's not caused by data errors or changes in how rates were calculated. 
 * **Strengthen Prevention in High-Change States:** Focus **obesity and diabetes** prevention campaigns in **Texas, California, and New York,** where aboslute changes were the highest.
@@ -97,10 +106,12 @@ A static preview of the full dashboard is available below.
 * **Reinforce Anti-Smoking Effects in California:** Despite national progress, **California** lagged in smoking reduction and may benefit from renewed prevention efforts. 
 * **Leverage Annual BRFSS Data:** Integrate yearly BRFSS updates into local dashboards to monitor shifts and target interventions in real time.
 
+
 ## Action Plan
 * **Report Findings:** Share dashboards and key insights with state-level public health departments and policy leads.
 * **Target Interventions:** Deploy region-specific health campaigns based on each state's condition trends and ranking profile.
 * **Refine Over Time:** Refresh dashboards and re-run analysis annually as new BRFSS data becomes available. 
+
 
 ## Repository Contents
 * README.md – Project overview, technical steps, insights, and recommendations
