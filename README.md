@@ -129,27 +129,27 @@ The Tableau dashboard illustrates decade-long trends in chronic conditions acros
 
 ## How to Reproduce
 1. **Get the source data**
-* Open and download dataset [link](data/data_link.md). Save the file(s) where your SQL environment can read them, highly recommend BigQuery.
+ * Open and download dataset [link](data/data_link.md). Save the file(s) where your SQL environment can read them, highly recommend BigQuery.
 
 2. **Run the SQL**: 
-* Open and run the [queries](work/sql_queries.sql) in BigQuery.
-* Filters:
-  * **Years:** 2012–2022
-  * **States:** CA, TX, FL, NY, PA
-  * **Indicators:** Obesity, Diabetes, Smoking, Depression
-  * **Data_Value_Type:** 'Crude Prevalence'
-  * **Break_Out:** 'Overall'
-* Pivot to columns: Obesity, Diabetes, Smoking, Depression
-* Left-join prior year and compute YoY % for QA only (first year per state yields null)
-* Save the result as a new table (e.g., your_project.your_ds.brfss_state_year)
+ * Open and run the [queries](work/sql_queries.sql) in BigQuery.
+ * Filters:
+    * **Years:** 2012–2022
+    * **States:** CA, TX, FL, NY, PA
+    * **Indicators:** Obesity, Diabetes, Smoking, Depression
+    * **Data_Value_Type:** 'Crude Prevalence'
+    * **Break_Out:** 'Overall'
+ * Pivot to columns: Obesity, Diabetes, Smoking, Depression
+ * Left-join prior year and compute YoY % for QA only (first year per state yields null)
+ * Save the result as a new table (e.g., your_project.your_ds.brfss_state_year)
 
 3. **Export to the workbook**
-* Open [spreadsheet](work/sheets/brfssx.xlsx).
-* Paste the BigQuery result into the **Original** tab. Keep these columns from SQL: **Year, LocationAbbr, LocationDesc, Obesity, Diabetes, Smoking, Depression**, plus the prior year columns and **YoY %** columns you computed in SQL for QA. Do not recalculate YoY in Sheets. 
-* Create or verify the tabs exist and point formulas to **Original**:
- * **Obesity, Diabetes, Smoking, Depression** tabs: Reference annual prevalence by state, and compute each state’s 10-year average with AVERAGEIFS
-   * Example: Overall five-state average → =AVERAGEIFS(D2:D, D2:D, "<>")
-   * Example: State average (CA) → =AVERAGEIFS(D2:D, B2:B, "CA", D2:D, "<>")
+ * Open [spreadsheet](work/sheets/brfssx.xlsx) and paste the BigQuery result into the **Original** tab.
+ * Keep these columns from SQL: **Year, LocationAbbr, LocationDesc, Obesity, Diabetes, Smoking, Depression**, plus the prior year columns and **YoY %** columns you computed in SQL for QA. Do not recalculate YoY in Sheets.
+ * Create or verify the tabs exist and point formulas to **Original**:
+    * **Obesity, Diabetes, Smoking, Depression** tabs: Reference annual prevalence by state, and compute each state’s 10-year average with AVERAGEIFS
+    * Example: Overall five-state average → =AVERAGEIFS(D2:D, D2:D, "<>")
+    * Example: State average (CA) → =AVERAGEIFS(D2:D, B2:B, "CA", D2:D, "<>")
  * Add conditional formatting that flags above or below the five-state average as documented in the sheet
  * **OPT, DIPT, SPT, DEPT** tabs: Insert pivot tables that summarize averages by year and state; confirm **Grand Totals** match the AVERAGEIFS values on the indicator tabs
  * **OYPT, DIYPT, SYPT, DEYPT** tabs: Create pivot tables over the **YoY %** columns from SQL to review directional patterns. Florida will have fewer intervals because 2021 is missing
@@ -159,31 +159,31 @@ The Tableau dashboard illustrates decade-long trends in chronic conditions acros
  * Compute each state’s **10-year average** per indicator
  * Compute the **five-state benchmark** as the simple unweighted mean of state prevalence using **available years only**. Florida 2021 automatically not included in all averages
  * Pull each state’s **2012** and **2022** values per indicator, then compute
-   * **Point change** = Value_2022 - Value_2012
-   * **Absolute change** = ABS(Value_2022 - Value_2012)
+    * **Point change** = Value_2022 - Value_2012
+    * **Absolute change** = ABS(Value_2022 - Value_2012)
  * Build the **bar chart** from **Absolute change** to show magnitude only in **percentage points**
  * Add **above/below benchmark** formatting for the 10-year averages
  * Create **rankings** for each indicator. 1 is highest change absolute point change and 5 is the least absolute point change
  * Compute an **overall average rank** across the four indicators to find final ranking for each state
 
 5. **Build the dashboard in Tableau**
-* Connect to the [spreadsheet](work/sheets/brfssx.xlsx) → use the **simplified extract** (Year, LocationAbbr, LocationDesc, Obesity, Diabetes, Smoking, Depression).
-* **Create four worksheets** (Obesity, Diabetes, Smoking, Depression):
-  * Columns: **Year**. Rows: **AVG([Indicator])**. Color: **LocationAbbr**
-* **Add the five-state benchmark as a constant from Sheets**:
-  * In each worksheet: Add Reference Line on Y-axis, Then Constant on Computation, and add Paste the indicator's benchmark
-  * Format the line style Dashed
-* **Filters & layout**: Show **State** filter → **Apply to all using this data source**
-* **QA**: Florida 2021 absent, benchmark lines match the Sheet, tooltips show levels (not % change), axes read as percentages
-* **Publish**: Publish the interactive Tableau dashboard
-* **Maintenance tip**: If benchmarks in Sheets change, update the constant values (or later switch to a Tableau calc if you want it dynamic)
+ * Connect to the [spreadsheet](work/sheets/brfssx.xlsx) → use the **simplified extract** (Year, LocationAbbr, LocationDesc, Obesity, Diabetes, Smoking, Depression).
+ * **Create four worksheets** (Obesity, Diabetes, Smoking, Depression):
+    * Columns: **Year**. Rows: **AVG([Indicator])**. Color: **LocationAbbr**
+ * **Add the five-state benchmark as a constant from Sheets**:
+    * In each worksheet: Add Reference Line on Y-axis, Then Constant on Computation, and add Paste the indicator's benchmark
+    * Format the line style Dashed
+ * **Filters & layout**: Show **State** filter → **Apply to all using this data source**
+ * **QA**: Florida 2021 absent, benchmark lines match the Sheet, tooltips show levels (not % change), axes read as percentages
+ * **Publish**: Publish the interactive Tableau dashboard
+ * **Maintenance tip**: If benchmarks in Sheets change, update the constant values (or later switch to a Tableau calc if you want it dynamic)
 
 6. **Verify QA**
-* Prevalence in **0–100** and stored as plain numbers
-* Exactly **one row per state-year** after pivot
-* **Florida 2021** absent across SQL, Sheets, and Tableau
-* Benchmarks in Sheets match SQL spot checks
-* Lines show prevalence values and bar chart shows absolute point change only
+ * Prevalence in **0–100** and stored as plain numbers
+ * Exactly **one row per state-year** after pivot
+ * **Florida 2021** absent across SQL, Sheets, and Tableau
+ * Benchmarks in Sheets match SQL spot checks
+ * Lines show prevalence values and bar chart shows absolute point change only
 
 
 ## Repository Contents
