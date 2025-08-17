@@ -4,7 +4,7 @@ This document provides a structured overview of each tab within the **[brfssx.xl
 **Spreadsheet conventions and units**
 * **Stored prevalence as numbers** without a percent sign. **E.g. 5 equals 5 percent.**
 * **Benchmarks** are the **simple average of prevalence** across the five states using available years only. **Florida excludes 2021.**
-* Absolute point change is Value_2022 - Value_2021 and the bar
+* Prevalence value differences are the point changes of Value_2022 - Value_2021 and the bar chart uses absolute 
 * Computed absolute point changes of 2022 and 2012.
 * Did not calculate YoY in the workbook. YoY percent change was computed in SQL for QA only.
 
