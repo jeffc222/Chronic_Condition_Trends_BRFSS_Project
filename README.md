@@ -91,18 +91,15 @@ For visualization of bar chart and dashboard, see [Visualizations](#Visualizatio
 ## Visualizations
 The Tableau dashboard illustrates decade-long trends in chronic conditions across the five most populous U.S. states. Each condition is displayed in a side-by-side line chart, with a unified dropdown filter that updates all charts simultaneously. A dashed reference line shows the five-state average as a benchmark. The bar chart displays absolute point difference between 2022 and 2012 made in Google Sheets. 
 
-**Interactive Dashboard**
-Explore trends by selecting a state using the filter at the top of the dashboard. Each line chart updates to reflect that state's trajectory over time. 
+**Interactive Dashboard**: Explore trends by selecting a state using the filter at the top of the dashboard. Each line chart updates to reflect that state's trajectory over time. 
 
 [View the interactive dashboard here](https://public.tableau.com/views/brfss2/ChronicConditionTrendsinFiveU_S_States2012-2022?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link)
 
-**Static Preview**
-A static preview of the full dashboard is available below.
+**Static Preview**: A static preview of the full dashboard is available below.
 
 ![tgraph](images/brfsstgraph.png)
 
-**Bar Chart**
-A snapshot of the bar chart for the absolute value difference between 2022 and 2012 is shown below. 
+**Bar Chart**: A snapshot of the bar chart for the absolute value difference between 2022 and 2012 is shown below. 
 ![absgraph](images/brfssabsgraph.png)
 
 
