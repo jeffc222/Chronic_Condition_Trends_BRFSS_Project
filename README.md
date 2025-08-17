@@ -70,6 +70,20 @@ An interactive dashboard was built in Tableau to help stakeholders explore state
 * Enabled unified filtering by state across all charts for seamless comparison
 * Displayed clean tooltips showing the year, state, and prevalence values
 
+### Data QA checks
+* **Ranges:** All prevalence values within 0 to 100 and stored as plain numbers
+* **Uniqueness:** Exactly one row per state per year after the pivot
+* **Joins:** Prior year join yields null YoY on each state’s first year only
+* **Codes:** State abbreviations validated and nulls removed
+* **Benchmarks:** Pivot table grand totals match AVERAGEIFS checks for five-state benchmark
+* **Florida 2021:** Consistently verified exclusion in SQL, Sheets, and Tableau
+
+### Analytical Choices
+* **Prevalence type:** Crude prevalence and the Overall breakout are used throughout for comparisons
+* **Benchmarks:** Simple unweighted means using available years only
+* **Bar chart:** Show absolute point change between 2012 and 2022
+* **Rounding:** For display only and does not drive logic
+
 
 ## Visualization
 The Tableau dashboard illustrates decade-long trends in chronic conditions across the five most populous U.S. states. Each condition is displayed in a side-by-side line chart, with a unified dropdown filter that updates all charts simultaneously. A dashed reference line shows the five-state average as a benchmark. The bar chart displays absolute point difference between 2022 and 2012 made in Google Sheets. 
