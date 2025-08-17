@@ -172,7 +172,7 @@ The Tableau dashboard illustrates decade-long trends in chronic conditions acros
  * **Create four worksheets** (Obesity, Diabetes, Smoking, Depression):
     * Columns: **Year**. Rows: **AVG([Indicator])**. Color: **LocationAbbr**
  * **Add the five-state benchmark as a constant from Sheets**:
-    * In each worksheet: Add Reference Line on Y-axis, Then Constant on Computation, and add Paste the indicator's benchmark
+    * In each worksheet: Add Reference Line on Y-axis → Pick constant in computation → Paste the indicator's benchmark in value
     * Format the line style Dashed
  * **Filters & layout**: Show **State** filter → **Apply to all using this data source**
  * **QA**: Florida 2021 absent, benchmark lines match the Sheet, tooltips show levels (not % change), axes read as percentages
