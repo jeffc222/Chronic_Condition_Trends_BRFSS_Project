@@ -6,7 +6,7 @@ The analysis combines **SQL, Google Sheets,** and **Tableau** to clean, process,
 ## Summary
 This file outlines the full workflow behind the BRFSS chronic condition analysis project, documenting how raw survey data was transformed into clean, visual-ready insights. It covers SQL extraction and transformation, spreadsheet-based calculations and validation, and Tableau dashboard preparation. Each step reflects best practices in analytical documentation and mirrors common workflows in real-world healthcare analytics roles.
 
-**Units and metrics**
+### Units and metrics
 * Prevalence is a percentage of adults 18 or older, stored as a plain number. For example 5 means 5 percent.
 * Percentage points mean a direct difference between two percentages. Example 18 percent to 15 percent is a change of 3 percentage points.
 * Percent change equals (new minus old) divided by old times 100. This was computed in SQL Step 3 after joining each state and year to its priro year.
@@ -14,6 +14,13 @@ This file outlines the full workflow behind the BRFSS chronic condition analysis
 * Bars show the absolute point change from 2012 to 2022 using the magnitude only.
 * Five state benchmarks in the Tableua dashboard are simple unweighted means. Florida averages exclude 2021.
 
+### Data Quality Assurance (QA) checks
+* **Field integrity:** Topic and Response map correctly to the four indicators after the pivot
+* **Range checks:** All prevalence fields within 0 to 100
+* **Key uniqueness:** (Year, LocationAbbr) unique after the pivot
+* **Prior year logic:** YoY set only when prior exists and null otherwise
+* **Cross checks:** Selected rows verified against CDC published tables
+* **Consistency:** Five state benchmarks from the Sheet benchmakrs are the same from =AVERAGEIF and average pivot tables
 
 --- 
 
@@ -126,8 +133,10 @@ This gap in Florida’s data was acknowledged and factored into comparative anal
 
 # Step 5: Limitations and Analytical Choices
 Several analytical decisions were informed by both data limitations and the scope of the project:
+* **Analytical conventions:** Uses **Crude Prevalence** with the **Overall** breakout across all years and states, defines five-state **benchmarks** as unweighted means across CA, TX, FL, NY, and PA using available years only, and applies **no population weighting** across states.
 * **Florida’s Missing 2021 Data:** As detailed above, this affects both regular and YoY averages and was factored into interpretation when comparing trends across states.
 * **Pivot Table Usage:** Pivot tables were used to validate manual calculations and supported internal QA. They reinforced understanding of multiple calculation approaches (formula-based vs. aggregation) and strengthened confidence in final values used for visualization.
+* **Bar chart metric:** Shows the absolute point change between 2012 and 2022 for each state and condition, computed as ABS(2022 − 2012) in percentage points, to compare magnitude only (not percent change or direction).
 * **YoY Metrics:** Year-over-year percentage changes were not included in the Tableau dashboard, but the pivot tables remain valuable for interpreting directional shifts and will be referenced in future recommendations or insights where appropriate.
   
 
