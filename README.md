@@ -31,8 +31,8 @@ The original BRFSS data was structured in **long format**, with each row represe
 For complete methodology and analytical rationale, see [notes](work/data_notes.md).
 
 ### Units and Metrics
-* All condition values are crude prevalence rates and represent the percent of adults age 18 or older. Values are stored as plain numbers. **For example 5 means 5 percent.**
-* The bar chart made in Google Sheets displays absolute point difference between 2022 and 2012. The percentage points are a direct difference between two percentages. For example 18 percent to 15 percent is a change of 3 percentage points.
+* All condition values are crude prevalence rates and represent the percent of adults age 18 or older. Values are stored as plain numbers. **For example, 5 means 5 percent.**
+* The bar chart made in Google Sheets displays absolute point difference between 2022 and 2012. The percentage points are a direct difference between two percentages. For example, 18 percent to 15 percent is a change of 3 percentage points.
 * The Tableau dashboarrd line charts plot crude prevalence values by year.
 * Year over year percent change is calculated in SQL for QA only and does not appear in the visuals.
 
