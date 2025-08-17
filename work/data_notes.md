@@ -13,7 +13,7 @@ This file outlines the full workflow behind the BRFSS chronic condition analysis
 * Percent change equals (new minus old) divided by old times 100. This was computed in SQL Step 3 after joining each state and year to its prior year.
   * This was used for Year-over-Year percent changes and was used only for QA, not shown in visuals.
 * Bars show the absolute point change from 2012 to 2022 using the magnitude only.
-* Five state benchmarks in the Tableua dashboard are simple unweighted means. Florida averages exclude 2021.
+* Five state benchmarks in the Tableau dashboard are simple unweighted means. Florida averages exclude 2021.
 
 ### Data Quality Assurance (QA) checks
 * **Field integrity:** Topic and Response map correctly to the four indicators after the pivot
@@ -21,7 +21,7 @@ This file outlines the full workflow behind the BRFSS chronic condition analysis
 * **Key uniqueness:** (Year, LocationAbbr) unique after the pivot
 * **Prior year logic:** YoY set only when prior exists and null otherwise
 * **Cross checks:** Selected rows verified against CDC published tables
-* **Consistency:** Five state benchmarks from the Sheet benchmakrs are the same from =AVERAGEIF and average pivot tables
+* **Consistency:** Five state benchmarks from the Sheet benchmarks are the same from =AVERAGEIF and average pivot tables
 
 --- 
 
