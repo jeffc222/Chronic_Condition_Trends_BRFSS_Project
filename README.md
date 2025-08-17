@@ -130,7 +130,6 @@ The Tableau dashboard illustrates decade-long trends in chronic conditions acros
 ## How to Reproduce
 1. **Get the source data**
 * Open and download dataset [link](data/data_link.md). Save the file(s) where your SQL environment can read them, highly recommend BigQuery.
-* data/dataset_link.md and note the BRFSS table path. If you’re using BigQuery, update the table reference in the SQL to your project (default in this repo: behavioralriskfactor.brfs.brfs12).
 
 2. **Run the SQL**: 
 Open and run the [queries](work/sql_queries.sql) in BigQuery. 
