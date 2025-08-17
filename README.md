@@ -132,13 +132,13 @@ The Tableau dashboard illustrates decade-long trends in chronic conditions acros
 * Open and download dataset [link](data/data_link.md). Save the file(s) where your SQL environment can read them, highly recommend BigQuery.
 
 2. **Run the SQL**: 
-Open and run the [queries](work/sql_queries.sql) in BigQuery. 
+Open and run the [queries](work/sql_queries.sql) in BigQuery.
 * Filters:
- * **Years:** 2012–2022
- * **States:** CA, TX, FL, NY, PA
- * **Indicators:** Obesity, Diabetes, Smoking, Depression
- * **Data_Value_Type:** 'Crude Prevalence'
- * **Break_Out:** 'Overall'
+  * **Years:** 2012–2022
+  * **States:** CA, TX, FL, NY, PA
+  * **Indicators:** Obesity, Diabetes, Smoking, Depression
+  * **Data_Value_Type:** 'Crude Prevalence'
+  * **Break_Out:** 'Overall'
 * Pivot to columns: Obesity, Diabetes, Smoking, Depression
 * Left-join prior year and compute YoY % for QA only (first year per state yields null)
 * Save the result as a new table (e.g., your_project.your_ds.brfss_state_year)
