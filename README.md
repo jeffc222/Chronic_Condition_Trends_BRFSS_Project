@@ -190,7 +190,7 @@ The Tableau dashboard illustrates decade-long trends in chronic conditions acros
 ## Repository Contents
 * README.md – Project overview, technical steps, insights, and recommendations
 * data/ – Dataset summary and data source
-  * dataset_link.md – Link to CDC BRFSS SMART dataset
+  * data_link.md – Link to CDC BRFSS dataset
 * work/ – Project work, including:
   * sql_queries.sql – SQL logic for data filtering and transformation
   * data_notes.md – Detailed justification of technical process and rationale
