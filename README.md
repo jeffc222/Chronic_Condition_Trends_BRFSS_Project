@@ -5,6 +5,7 @@ This project analyzes 11 years of trends in four major chronic health conditions
 
 The goal is to uncover long-term shifts in health outcomes, compare state-level patterns against the five-state average, and pinpoint areas where public health efforts may be most needed. The analysis is designed to help health agencies and decision-makers respond to emerging trends. 
 
+**Reproduce this analysis** → see [How to Reproduce](#How-to-Reproduce)
 
 ## Objectives
 * Track how **obesity, diabetes, smoking, and depression** changed from 2012 to 2022
@@ -70,7 +71,7 @@ An interactive dashboard was built in Tableau to help stakeholders explore state
 * Enabled unified filtering by state across all charts for seamless comparison
 * Displayed clean tooltips showing the year, state, and prevalence values
 
-For visualization of bar chart and dashboard, see [Visualizations](#Visualizations) 
+For visualization of bar chart and dashboard, see [Visualizations](#Visualizations). 
 
 ## Methods and Data Quality
 ### Data Quality Assurance (QA) checks
@@ -86,7 +87,6 @@ For visualization of bar chart and dashboard, see [Visualizations](#Visualizatio
 * **Benchmarks:** Simple unweighted means using available years only
 * **Bar chart:** Show absolute point change between 2012 and 2022
 * **Rounding:** For display only and does not drive logic
-
 
 ## Visualizations
 The Tableau dashboard illustrates decade-long trends in chronic conditions across the five most populous U.S. states. Each condition is displayed in a side-by-side line chart, with a unified dropdown filter that updates all charts simultaneously. A dashed reference line shows the five-state average as a benchmark. The bar chart displays absolute point difference between 2022 and 2012 made in Google Sheets. 
@@ -128,6 +128,35 @@ A snapshot of the bar chart for the absolute value difference between 2022 and 2
 * **Report Findings:** Share dashboards and key insights with state-level public health departments and policy leads.
 * **Target Interventions:** Deploy region-specific health campaigns based on each state's condition trends and ranking profile.
 * **Refine Over Time:** Refresh dashboards and re-run analysis annually as new BRFSS data becomes available. 
+
+
+## How to Reproduce
+1. Get the source data
+ Open data/dataset_link.md and note the BRFSS table path. If you’re using BigQuery, update the table reference in the SQL to your project (default in this repo: behavioralriskfactor.brfs.brfs12).
+2. Run the SQLOpen work/sql_queries.sql in BigQuery and run the script:
+* Filters: Years 2012–2022, CA TX FL NY PA, Data_Value_Type = 'Crude Prevalence', Break_Out = 'Overall'
+* Pivot to columns: Obesity, Diabetes, Smoking, Depression
+* Left-join prior year and compute YoY % for QA only (first year per state yields null)
+* Save the result as a new table (e.g., your_project.your_ds.brfss_state_year)
+3. Export to the workbook
+* Export the result to work/sheets/brfssx.xlsx (or Google Sheets, then save as XLSX).
+* Keep the QA columns, and duplicate a simplified extract with: Year, LocationAbbr, LocationDesc, Obesity, Diabetes, Smoking, Depression for Tableau.
+4. Set up the Summary tab in Sheets
+* Compute each state’s 11-year average for each indicator
+* Compute the five-state benchmark as the simple average of state prevalence using available years only (Florida excludes 2021)
+* Add above/below benchmark formatting between state's average compared to five-state average benchmark
+* Add Prevalence Value Difference Between 2012 & 2022 table which hass the absolute value differences of values 2022 and 2012 for each condition
+* Build the bar chart from Absolute changes and create a ranking based on each state's ranking for each indicator
+5. Build the dashboard in Tableau
+* Connect to the simplified extract
+* Create four line charts (one per indicator) with a unified state filter
+* Add a dashed reference line for the five-state average
+6. Verify QA
+* Prevalence in 0–100 and stored as plain numbers
+* Exactly one row per state-year after pivot
+* Florida 2021 absent across SQL, Sheets, and Tableau
+* Benchmarks in Sheets match SQL spot checks
+* Lines show prevalence values and bar chart shows absolute point change only
 
 
 ## Repository Contents
