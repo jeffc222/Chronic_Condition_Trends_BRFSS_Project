@@ -156,15 +156,15 @@ The Tableau dashboard illustrates decade-long trends in chronic conditions acros
 
 4. **Build the Summary tab and bar chart**
 * In **Summary** tab, assemble cross-indicator comparisons and the bar inputs:
-   * Compute each state’s **10-year average** per indicator
-   * Compute the **five-state benchmark** as the simple unweighted mean of state prevalence using **available years only**. Florida 2021 automatically not included in all averages
-   * Pull each state’s **2012** and **2022** values per indicator, then compute
-     *  **Point change** = Value_2022 - Value_2012
-     *   **Absolute change** = ABS(Value_2022 - Value_2012)
-   * Build the **bar chart** from **Absolute change** to show magnitude only in **percentage points**
-   * Add **above/below benchmark** formatting for the 10-year averages
-   * Create **rankings** for each indicator. 1 is highest change absolute point change and 5 is the least absolute point change
-   * Compute an **overall average rank** across the four indicators to find final ranking for each state
+ * Compute each state’s **10-year average** per indicator
+ * Compute the **five-state benchmark** as the simple unweighted mean of state prevalence using **available years only**. Florida 2021 automatically not included in all averages
+ * Pull each state’s **2012** and **2022** values per indicator, then compute
+   * **Point change** = Value_2022 - Value_2012
+   * **Absolute change** = ABS(Value_2022 - Value_2012)
+ * Build the **bar chart** from **Absolute change** to show magnitude only in **percentage points**
+ * Add **above/below benchmark** formatting for the 10-year averages
+ * Create **rankings** for each indicator. 1 is highest change absolute point change and 5 is the least absolute point change
+ * Compute an **overall average rank** across the four indicators to find final ranking for each state
 
 5. **Build the dashboard in Tableau**
 * Connect to the [spreadsheet](work/sheets/brfssx.xlsx) → use the **simplified extract** (Year, LocationAbbr, LocationDesc, Obesity, Diabetes, Smoking, Depression).
