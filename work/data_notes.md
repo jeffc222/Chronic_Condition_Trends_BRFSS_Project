@@ -6,7 +6,7 @@ The analysis combines **SQL, Google Sheets,** and **Tableau** to clean, process,
 ## Summary
 This file outlines the full workflow behind the BRFSS chronic condition analysis project, documenting how raw survey data was transformed into clean, visual-ready insights. It covers SQL extraction and transformation, spreadsheet-based calculations and validation, and Tableau dashboard preparation. Each step reflects best practices in analytical documentation and mirrors common workflows in real-world healthcare analytics roles.
 
-### Units and metrics
+### Units and Metrics
 * Prevalence is a percentage of adults 18 or older, stored as a plain number. For example 5 means 5 percent.
 * Percentage points mean a direct difference between two percentages. Example 18 percent to 15 percent is a change of 3 percentage points.
 * Percent change equals (new minus old) divided by old times 100. This was computed in SQL Step 3 after joining each state and year to its priro year.
