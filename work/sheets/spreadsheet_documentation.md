@@ -4,7 +4,7 @@ This document provides a structured overview of each tab within the **[brfssx.xl
 **Spreadsheet conventions and units**
 * **Stored prevalence as numbers** without a percent sign. **E.g. 5 equals 5 percent.**
 * **Benchmarks** are the **simple average of prevalence** across the five states using available years only. **Florida excludes 2021.**
-* Prevalence value differences are the **absolute point changes of Value_2022 - Value_2021** which are used to make a bar chart.
+* Prevalence value differences are the **absolute point changes of Value_2022 - Value_2012** which are used to make a bar chart.
 * **Year-over-Year (YoY) change** was computed **in SQL for Quality Assurance (QA)** and was not recalculated in the spreadsheet. 
 
 
@@ -17,7 +17,7 @@ For each condition, this dataset also includes the **prior year’s value** and 
 
 ## Summary Tab
 This tab presents a high-level overview of average prevalence rates (2012-2022) for each condition across all five states, alongside five-state benchmarks for comparison. Conditional formatting highlights whether each state's average is **above or below** the five-state average, making disparities in chronic and behavioral health burdens quickly visible.
-In addition to averages, the tab calculates **absolute point changes** (2022 value minus 2012 value) for each indicator by state and a bar graph was made for these values. These differences are then **ranked from highest to lowest change,** with **smoking** rankings reversed to reflect that a larger decline is more favorable. An average ranking was computed across all four indicator to assess each state's overall trajectory. For instance, **Texas and California tied for the most significant overall shifts,** each an average ranking of **2.25**.
+In addition to averages, the tab calculates **absolute point changes** (2022 value minus 2012 value) for each indicator by state and a bar graph was made for these values. These differences are then **ranked from highest to lowest change,** with **smoking** rankings reversed to reflect that a larger decline is more favorable. An average ranking was computed across all four indicators to assess each state's overall trajectory. For instance, **Texas and California tied for the most significant overall shifts,** each an average ranking of **2.25**.
 This tab synthesizes raw trends and performance-based rankings to help inform which states experienced the greatest health shifts over the decade, serving as a foundation for subsequent insights and recommendations. 
 
 ![summary](../../images/brfsssum.png)
