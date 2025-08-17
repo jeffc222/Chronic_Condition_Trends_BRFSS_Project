@@ -3,9 +3,9 @@ This document provides a structured overview of each tab within the **[brfssx.xl
 
 **Spreadsheet conventions and units**
 * Store prevalence as numbers without a percent sign. 5 equals 5 percent.
-* Label difference columns as Point change and compute ABS(Value_2022 - Value_2012).
-* Do not calculate YoY in the workbook. YoY percent change was computed in SQL for QA only.
-* Benchmarks use simple means of available years. Florida omits 2021 in all averages and counts.
+* Benchmarks use simple average of prevalence across the five states using available years only. Florida excludes 2021.
+* Computed absolute point changes of 2022 and 2012.
+* Did not calculate YoY in the workbook. YoY percent change was computed in SQL for QA only.
 
 ## Original Tab
 This tab contains the full cleaned dataset exported from BigQuery and serves as the foundation for all downstream analysis. It includes annual prevalence values for four chronic health indicators—**obesity, diabetes, smoking,** and **depression**—across five selected U.S. states **(California, Texas, Florida, New York, and Pennsylvania)** from 2012 to 2022.
