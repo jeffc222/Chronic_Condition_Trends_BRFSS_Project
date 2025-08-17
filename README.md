@@ -27,14 +27,14 @@ The final dataset includes:
 
 The original BRFSS data was structured in **long format**, with each row representing a unique combination of year, state, condition, and prevalence value. Using SQL, the data was pivoted into **wide format**, one row per state-year with separate columns for each health indicator. A **self-join** was applied to calculate **prior-year values** and **year-over-year (YoY) percentage changes**, supporting multi-year comparisons across all five states. 
 
-**Units and metrics** 
+For complete methodology and analytical rationale, see [notes](work/data_notes.md).
 
+### Units and Metrics
 * All condition values are crude prevalence rates and represent the percent of adults age 18 or older. Values are stored as plain numbers. **For example 5 means 5 percent.**
 * The bar chart made in Google Sheets displays absolute point difference between 2022 and 2012. The percentage points are a direct difference between two percentages. For example 18 percent to 15 percent is a change of 3 percentage points.
 * The Tableau dashboarrd line charts plot crude prevalence values by year.
 * Year over year percent change is calculated in SQL for QA only and does not appear in the visuals.
 
-For complete methodology and analytical rationale, see [notes](work/data_notes.md).
 
 ![table](images/brfsstable.png)
 
@@ -70,7 +70,10 @@ An interactive dashboard was built in Tableau to help stakeholders explore state
 * Enabled unified filtering by state across all charts for seamless comparison
 * Displayed clean tooltips showing the year, state, and prevalence values
 
-### Data QA checks
+For visualization of bar chart and dashboard, see [Visualizations](#Visualizations) 
+
+## Methods and Data Quality
+### Data Quality Assurance (QA) checks
 * **Ranges:** All prevalence values within 0 to 100 and stored as plain numbers
 * **Uniqueness:** Exactly one row per state per year after the pivot
 * **Joins:** Prior year join yields null YoY on each state’s first year only
@@ -85,7 +88,7 @@ An interactive dashboard was built in Tableau to help stakeholders explore state
 * **Rounding:** For display only and does not drive logic
 
 
-## Visualization
+## Visualizations
 The Tableau dashboard illustrates decade-long trends in chronic conditions across the five most populous U.S. states. Each condition is displayed in a side-by-side line chart, with a unified dropdown filter that updates all charts simultaneously. A dashed reference line shows the five-state average as a benchmark. The bar chart displays absolute point difference between 2022 and 2012 made in Google Sheets. 
 
 **Interactive Dashboard**
